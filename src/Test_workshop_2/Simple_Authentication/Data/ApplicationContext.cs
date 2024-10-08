@@ -15,7 +15,7 @@ namespace Simple_Authentication.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=DESKTOP-F9SMEKT;Database=Test_BaseProject_DB;Trusted_Connection=True;TrustServerCertificate=True;";
+            string connectionString = "Server=DESKTOP-F9SMEKT;Database=Test_Simple_Authentication_DB;Trusted_Connection=True;TrustServerCertificate=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
     }

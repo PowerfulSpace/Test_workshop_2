@@ -4,6 +4,8 @@ using Test_Many_To_Many.Models;
 
 using (ApplicationContext db = new ApplicationContext())
 {
+    Console.WriteLine("Добро пожаловать!");
+
     // пересоздадим базу данных
     db.Database.EnsureDeleted();
     db.Database.EnsureCreated();
