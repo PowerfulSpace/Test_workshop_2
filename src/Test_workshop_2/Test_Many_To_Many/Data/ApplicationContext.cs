@@ -16,7 +16,7 @@ namespace Test_Many_To_Many.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Server=(localdb)\\mssqllocaldb;Database=Test_BaseProject_DB;Trusted_Connection=True;";
+            string connectionString = "Server=DESKTOP-F9SMEKT;Database=Test_BaseProject_DB;Trusted_Connection=True;TrustServerCertificate=True;";
             optionsBuilder.UseSqlServer(connectionString);
         }
 
