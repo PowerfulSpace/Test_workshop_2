@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "001_Test_Many_To_Many", "Test_Many_To_Many\001_Test_Many_To_Many.csproj", "{281F227D-6EE3-4F42-AB15-431EEF158B08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Simple_Authentication", "Simple_Authentication\Simple_Authentication.csproj", "{EA32E48E-0023-4658-AF43-F66F055F96E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "002_Simple_Authentication", "Simple_Authentication\002_Simple_Authentication.csproj", "{EA32E48E-0023-4658-AF43-F66F055F96E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "003_Joke", "Joke\003_Joke.csproj", "{4EC580CB-F106-46F6-A386-E80EBCC567E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EA32E48E-0023-4658-AF43-F66F055F96E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA32E48E-0023-4658-AF43-F66F055F96E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA32E48E-0023-4658-AF43-F66F055F96E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EC580CB-F106-46F6-A386-E80EBCC567E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EC580CB-F106-46F6-A386-E80EBCC567E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EC580CB-F106-46F6-A386-E80EBCC567E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EC580CB-F106-46F6-A386-E80EBCC567E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
