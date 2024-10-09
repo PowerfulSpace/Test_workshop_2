@@ -6,7 +6,7 @@ namespace Average_Authentication.Services
 {
     public class AuthService
     {
-        public static void Register(string username, string password)
+        public static void Register(string username, string password, string role = "User")
         {
             using (ApplicationContext db = new ApplicationContext())
             {
@@ -27,12 +27,13 @@ namespace Average_Authentication.Services
                     Id = Guid.NewGuid(),
                     Username = username,
                     PasswordHash = passwordHash,
-                    Salt = salt
+                    Salt = salt,
+                    Role = role // Присваиваем роль при регистрации
                 };
 
                 db.Users.Add(newUser);
                 db.SaveChanges();
-                Console.WriteLine("Пользователь успешно зарегистрирован.");
+                Console.WriteLine($"Пользователь {username} с ролью {role} успешно зарегистрирован.");
             }
         }
 
@@ -56,7 +57,7 @@ namespace Average_Authentication.Services
                     return null;
                 }
 
-                Console.WriteLine("Успешная аутентификация.");
+                Console.WriteLine($"Успешная аутентификация. Роль: {user.Role}");
                 return user;
             }
         }

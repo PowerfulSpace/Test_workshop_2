@@ -9,6 +9,12 @@ namespace Average_Authentication.Data
         public DbSet<Course> Courses { get; set; }
         public DbSet<Student> Students { get; set; }
 
+        public ApplicationContext()
+        {
+            // При первом запуске создадим базу данных
+            Database.EnsureCreated();
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string connectionString = "Server=DESKTOP-F9SMEKT;Database=Test_Average_Authentication_DB;Trusted_Connection=True;TrustServerCertificate=True;";
