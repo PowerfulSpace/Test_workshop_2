@@ -13,7 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "004_Average_Authentication"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "005_Strong_Authentication", "Strong_Authentication\005_Strong_Authentication.csproj", "{008B8673-C17D-4F0F-B64D-A0BD647737F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy_TokenGeneration", "Easy_TokenGeneration\Easy_TokenGeneration.csproj", "{78608D5C-88FE-48DB-ACD4-EA444107C9D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "006_Easy_TokenGeneration", "Easy_TokenGeneration\006_Easy_TokenGeneration.csproj", "{78608D5C-88FE-48DB-ACD4-EA444107C9D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Average_TokenGeneration", "Average_TokenGeneration\Average_TokenGeneration.csproj", "{07144224-6275-46C5-91A8-15D0C201FEC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{78608D5C-88FE-48DB-ACD4-EA444107C9D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78608D5C-88FE-48DB-ACD4-EA444107C9D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78608D5C-88FE-48DB-ACD4-EA444107C9D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07144224-6275-46C5-91A8-15D0C201FEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07144224-6275-46C5-91A8-15D0C201FEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07144224-6275-46C5-91A8-15D0C201FEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07144224-6275-46C5-91A8-15D0C201FEC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
