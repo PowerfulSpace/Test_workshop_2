@@ -6,29 +6,27 @@ namespace Strong_Authentication.Services
 {
     public class AuthService
     {
+        // Регистрация пользователя с ролью
         public static void Register(string username, string password, string role = "User")
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                // Проверяем, существует ли пользователь с таким именем
                 if (db.Users.Any(u => u.Username == username))
                 {
                     Console.WriteLine("Пользователь с таким именем уже существует.");
                     return;
                 }
 
-                // Генерация соли и хэширование пароля
                 string salt = PasswordHelper.GenerateSalt();
                 string passwordHash = PasswordHelper.HashPassword(password, salt);
 
-                // Создаем нового пользователя
                 User newUser = new User
                 {
                     Id = Guid.NewGuid(),
                     Username = username,
                     PasswordHash = passwordHash,
                     Salt = salt,
-                    Role = role // Присваиваем роль при регистрации
+                    Role = role
                 };
 
                 db.Users.Add(newUser);
@@ -37,11 +35,11 @@ namespace Strong_Authentication.Services
             }
         }
 
-        public static User? Authenticate(string username, string password)
+        // Аутентификация пользователя
+        public static string? Authenticate(string username, string password)
         {
             using (ApplicationContext db = new ApplicationContext())
             {
-                // Ищем пользователя по имени
                 User user = db.Users.FirstOrDefault(u => u.Username == username)!;
 
                 if (user == null)
@@ -50,7 +48,6 @@ namespace Strong_Authentication.Services
                     return null;
                 }
 
-                // Проверяем правильность пароля
                 if (!PasswordHelper.VerifyPassword(password, user.PasswordHash, user.Salt))
                 {
                     Console.WriteLine("Неверный пароль.");
@@ -58,6 +55,33 @@ namespace Strong_Authentication.Services
                 }
 
                 Console.WriteLine($"Успешная аутентификация. Роль: {user.Role}");
+
+                // Генерируем JWT-токен
+                string token = JwtHelper.GenerateToken(user.Username, user.Role);
+
+                // Логируем успешную аутентификацию
+                LoggingService.Log($"Пользователь {user.Username} успешно аутентифицирован.");
+
+                return token;
+            }
+        }
+
+        // Получение пользователя из токена
+        public static User? GetUserFromToken(string token)
+        {
+            var principal = JwtHelper.GetPrincipal(token);
+
+            if (principal == null)
+            {
+                Console.WriteLine("Недействительный токен.");
+                return null;
+            }
+
+            var username = principal.Identity!.Name;
+
+            using (ApplicationContext db = new ApplicationContext())
+            {
+                User user = db.Users.FirstOrDefault(u => u.Username == username)!;
                 return user;
             }
         }

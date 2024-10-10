@@ -9,6 +9,8 @@ namespace Strong_Authentication.Services
         // Метод для вывода доступных курсов
         public void ShowCourses(User user)
         {
+            LoggingService.Log($"Пользователь {user.Username} просматривает курсы.");
+
             using (ApplicationContext db = new ApplicationContext())
             {
                 var courses = db.Courses.Include(c => c.Students).ToList();
@@ -26,10 +28,10 @@ namespace Strong_Authentication.Services
             }
         }
 
-        // Метод для добавления курса (только для администратора)
-        public void AddCourse(User admin, string courseName)
+        // Остальные методы остаются прежними, но добавим логирование и проверку роли из токена
+        public void AddCourse(User user, string courseName)
         {
-            if (admin.Role != "Admin")
+            if (user.Role != "Admin")
             {
                 Console.WriteLine("У вас нет прав для добавления курсов.");
                 return;
@@ -46,13 +48,14 @@ namespace Strong_Authentication.Services
                 db.Courses.Add(newCourse);
                 db.SaveChanges();
                 Console.WriteLine($"Курс {courseName} добавлен.");
+
+                LoggingService.Log($"Администратор {user.Username} добавил курс {courseName}.");
             }
         }
 
-        // Метод для добавления студента (только для администратора)
-        public void AddStudent(User admin, string studentName)
+        public void AddStudent(User user, string studentName)
         {
-            if (admin.Role != "Admin")
+            if (user.Role != "Admin")
             {
                 Console.WriteLine("У вас нет прав для добавления студентов.");
                 return;
@@ -69,14 +72,14 @@ namespace Strong_Authentication.Services
                 db.Students.Add(newStudent);
                 db.SaveChanges();
                 Console.WriteLine($"Студент {studentName} добавлен.");
+
+                LoggingService.Log($"Администратор {user.Username} добавил студента {studentName}.");
             }
         }
 
-
-        // Метод для добавления студента на курс (только для администратора)
-        public void AssignStudentToCourse(User admin, string studentName, string courseName)
+        public void AssignStudentToCourse(User user, string studentName, string courseName)
         {
-            if (admin.Role != "Admin")
+            if (user.Role != "Admin")
             {
                 Console.WriteLine("У вас нет прав для добавления студентов на курсы.");
                 return;
@@ -87,15 +90,23 @@ namespace Strong_Authentication.Services
                 var student = db.Students.FirstOrDefault(s => s.Name == studentName);
                 var course = db.Courses.Include(c => c.Students).FirstOrDefault(c => c.Name == courseName);
 
-                if (student == null || course == null)
+                if (student == null)
                 {
-                    Console.WriteLine("Студент или курс не найдены.");
+                    Console.WriteLine("Студент не найден.");
+                    return;
+                }
+
+                if (course == null)
+                {
+                    Console.WriteLine("Курс не найден.");
                     return;
                 }
 
                 course.Students.Add(student);
                 db.SaveChanges();
                 Console.WriteLine($"Студент {studentName} добавлен на курс {courseName}.");
+
+                LoggingService.Log($"Администратор {user.Username} назначил студента {studentName} на курс {courseName}.");
             }
         }
     }
