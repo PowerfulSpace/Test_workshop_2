@@ -7,7 +7,7 @@ namespace Strong_Authentication.Helpers
 {
     public static class JwtHelper
     {
-        private static readonly string SecretKey = "YourVeryStrongSecretKey"; // Секретный ключ для подписания токена
+        private static readonly string SecretKey = "ThisIsAReallyStrongSecretKey1234"; // Секретный ключ для подписания токена
         private static readonly string Issuer = "TestApp"; // Издатель токена
         private static readonly string Audience = "TestAppUsers"; // Потребитель токена
 
