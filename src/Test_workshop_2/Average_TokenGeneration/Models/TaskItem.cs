@@ -6,11 +6,11 @@
         public string Title { get; set; }
         public bool IsCompleted { get; set; }
 
-        public TaskItem(int id, string title, bool isCompleted = false)
+        public TaskItem(int id, string title)
         {
             Id = id;
             Title = title;
-            IsCompleted = isCompleted;
+            IsCompleted = false;
         }
 
         public override string ToString()

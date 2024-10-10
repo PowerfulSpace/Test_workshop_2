@@ -1,50 +1,41 @@
-﻿namespace Average_TokenGeneration.Services
+﻿using Average_TokenGeneration.Models;
+
+namespace Average_TokenGeneration.Services
 {
-    public class FileStorage
+    public static class FileStorage
     {
-        private static string dataDirectory = "data";  // Папка для хранения данных
-        private static string filePath = Path.Combine(dataDirectory, "tasks.txt");  // Путь к файлу задач
+        private static string filePath = "tasks.txt";
 
-        // Метод для сохранения задач в файл
-        public static void SaveTasks(string[] tasks)
+        public static void SaveTasks(List<TaskItem> tasks)
         {
-            try
+            using (StreamWriter writer = new StreamWriter(filePath))
             {
-                // Проверяем, существует ли директория для хранения данных, если нет - создаем её
-                if (!Directory.Exists(dataDirectory))
+                foreach (var task in tasks)
                 {
-                    Directory.CreateDirectory(dataDirectory);
+                    writer.WriteLine($"{task.Id}|{task.Title}|{task.IsCompleted}");
                 }
-
-                // Записываем задачи в файл
-                File.WriteAllLines(filePath, tasks);
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка при сохранении задач: {ex.Message}");
-            }
+            Logger.Log("Tasks saved to file.");
         }
 
-        // Метод для загрузки задач из файла
-        public static string[] LoadTasks()
+        public static List<TaskItem> LoadTasks()
         {
-            try
+            var tasks = new List<TaskItem>();
+            if (File.Exists(filePath))
             {
-                // Если файл существует, читаем его содержимое
-                if (File.Exists(filePath))
+                var lines = File.ReadAllLines(filePath);
+                foreach (var line in lines)
                 {
-                    return File.ReadAllLines(filePath);
+                    var parts = line.Split('|');
+                    var task = new TaskItem(int.Parse(parts[0]), parts[1])
+                    {
+                        IsCompleted = bool.Parse(parts[2])
+                    };
+                    tasks.Add(task);
                 }
-                else
-                {
-                    return new string[0];  // Возвращаем пустой массив, если файл не найден
-                }
+                Logger.Log("Tasks loaded from file.");
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Ошибка при загрузке задач: {ex.Message}");
-                return new string[0];  // В случае ошибки возвращаем пустой массив
-            }
+            return tasks;
         }
     }
 }

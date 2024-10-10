@@ -67,36 +67,4 @@ public class TaskManager
     {
         return _tasks;
     }
-
-    // Метод для сохранения задач в файл
-    public void SaveTasks()
-    {
-        var taskStrings = _tasks.Select(task => $"{task.Id},{task.Title},{task.IsCompleted}").ToArray();
-        FileStorage.SaveTasks(taskStrings);  // Используем FileStorage для сохранения
-        Logger.Log("All tasks saved to file.");
-    }
-
-    // Метод для загрузки задач из файла
-    public void LoadTasks()
-    {
-        string[] taskStrings = FileStorage.LoadTasks();
-        foreach (var taskString in taskStrings)
-        {
-            var taskParts = taskString.Split(',');
-            if (taskParts.Length == 3)
-            {
-                int id = int.Parse(taskParts[0]);
-                string title = taskParts[1];
-                bool isCompleted = bool.Parse(taskParts[2]);
-
-                var task = new TaskItem(id, title, isCompleted);
-                _tasks.Add(task);
-
-                // Обновляем _nextId для корректного добавления новых задач
-                _nextId = Math.Max(_nextId, id + 1);
-            }
-        }
-
-        Logger.Log("Tasks loaded from file.");
-    }
 }
