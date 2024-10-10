@@ -1,5 +1,4 @@
-﻿
-// Секретный ключ для подписи JWT
+﻿// Секретный ключ для подписи JWT
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
