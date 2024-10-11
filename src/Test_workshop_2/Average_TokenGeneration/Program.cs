@@ -1,64 +1,79 @@
-﻿using Average_TokenGeneration.Services;
+﻿
 
-var taskManager = new TaskManager();
+// Секретный ключ для подписи токена
+using Microsoft.IdentityModel.Tokens;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
-// Загрузка задач из файла
-var savedTasks = FileStorage.LoadTasks();
-foreach (var task in savedTasks)
+
+
+string secretKey = "ThisIsAReallyStrongSecretKey1234"; // Замените на свой ключ
+
+
+
+
+Console.WriteLine("JWT Token Generator");
+
+// Генерация токена
+var token = GenerateJwtToken("123", "user@example.com");
+Console.WriteLine($"Generated Token: {token}");
+
+// Проверка токена
+Console.WriteLine("Validating token...");
+var isValid = ValidateJwtToken(token);
+Console.WriteLine($"Token is valid: {isValid}");
+
+Console.ReadLine();
+
+
+
+// Метод генерации JWT токена
+string GenerateJwtToken(string userId, string email)
 {
-    taskManager.AddTask(task.Title);
+    var tokenHandler = new JwtSecurityTokenHandler();
+    var key = Encoding.ASCII.GetBytes(secretKey);
+
+    // Задание параметров токена (заголовок и полезная нагрузка)
+    var tokenDescriptor = new SecurityTokenDescriptor
+    {
+        Subject = new ClaimsIdentity(new Claim[]
+        {
+                    new Claim(ClaimTypes.NameIdentifier, userId),
+                    new Claim(ClaimTypes.Email, email)
+        }),
+        Expires = DateTime.UtcNow.AddHours(1), // Время жизни токена
+        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+    };
+
+    // Создание токена
+    var token = tokenHandler.CreateToken(tokenDescriptor);
+    return tokenHandler.WriteToken(token);
 }
 
-while (true)
+// Метод проверки валидности JWT токена
+bool ValidateJwtToken(string token)
 {
-    Console.WriteLine("\nMenu:");
-    Console.WriteLine("1. Add task");
-    Console.WriteLine("2. Remove task");
-    Console.WriteLine("3. Complete task");
-    Console.WriteLine("4. List tasks");
-    Console.WriteLine("5. Save and Exit");
-    Console.Write("Choose an option: ");
+    var tokenHandler = new JwtSecurityTokenHandler();
+    var key = Encoding.ASCII.GetBytes(secretKey);
 
-    var choice = Console.ReadLine();
-
-    switch (choice)
+    try
     {
-        case "1":
-            Console.Write("Enter task title: ");
-            var title = Console.ReadLine();
-            taskManager.AddTask(title);
-            break;
-        case "2":
-            Console.Write("Enter task ID to remove: ");
-            if (int.TryParse(Console.ReadLine(), out int removeId))
-            {
-                taskManager.RemoveTask(removeId);
-            }
-            else
-            {
-                Console.WriteLine("Invalid ID.");
-            }
-            break;
-        case "3":
-            Console.Write("Enter task ID to mark as complete: ");
-            if (int.TryParse(Console.ReadLine(), out int completeId))
-            {
-                taskManager.MarkTaskAsCompleted(completeId);
-            }
-            else
-            {
-                Console.WriteLine("Invalid ID.");
-            }
-            break;
-        case "4":
-            taskManager.ListTasks();
-            break;
-        case "5":
-            FileStorage.SaveTasks(taskManager.GetAllTasks());
-            Console.WriteLine("Tasks saved. Exiting.");
-            return;
-        default:
-            Console.WriteLine("Invalid option. Please try again.");
-            break;
+        // Валидация токена
+        tokenHandler.ValidateToken(token, new TokenValidationParameters
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = new SymmetricSecurityKey(key),
+            ValidateIssuer = false,
+            ValidateAudience = false,
+            ClockSkew = TimeSpan.Zero
+        }, out SecurityToken validatedToken);
+
+        return true; // Токен валиден
+    }
+    catch
+    {
+        return false; // Токен не валиден
     }
 }
+
