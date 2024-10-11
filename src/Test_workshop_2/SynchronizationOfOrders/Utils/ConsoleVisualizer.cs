@@ -4,19 +4,12 @@ namespace SynchronizationOfOrders.Utils
 {
     public class ConsoleVisualizer
     {
-        // Метод для вывода сообщения с возможностью настройки цвета
-        public void PrintMessage(string message, ConsoleColor color)
+        // Приватный метод для вывода сообщения с возможностью настройки цвета
+        private void PrintMessage(Func<string> messageFunc, ConsoleColor color)
         {
-            // Сохраняем текущий цвет консоли
             var originalColor = Console.ForegroundColor;
-
-            // Устанавливаем цвет для текущего сообщения
             Console.ForegroundColor = color;
-
-            // Выводим сообщение
-            Console.WriteLine(message);
-
-            // Восстанавливаем исходный цвет консоли
+            Console.WriteLine(messageFunc()); // Вызываем функцию для получения сообщения
             Console.ForegroundColor = originalColor;
         }
 
@@ -25,13 +18,12 @@ namespace SynchronizationOfOrders.Utils
         {
             if (isProcessed)
             {
-                // Если заказ обработан
-                PrintMessage($"Заказ {order.OrderId} от {order.Customer} на товар {order.Product} обработан.", ConsoleColor.Green);
+                // Используем лямбда-выражение для формирования сообщения
+                PrintMessage(() => $"Заказ {order.OrderId} от {order.Customer} на товар {order.Product} обработан.", ConsoleColor.Green);
             }
             else
             {
-                // Если заказ добавлен
-                PrintMessage($"Пользователь {userId} добавил заказ: {order.OrderId} ({order.Product})", ConsoleColor.Yellow);
+                PrintMessage(() => $"Пользователь {userId} добавил заказ: {order.OrderId} ({order.Product})", ConsoleColor.Yellow);
             }
         }
     }
