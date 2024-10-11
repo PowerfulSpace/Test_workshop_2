@@ -1,45 +1,31 @@
-﻿using System.Collections.Concurrent;
+﻿using Easy_Thread_safe_collections_2.Models;
+using Easy_Thread_safe_collections_2.Services;
+using System.Collections.Concurrent;
 
-Console.WriteLine("Start working with ConcurrentBag!");
+// Очередь для хранения заказов
+ConcurrentQueue<Order> orderQueue = new ConcurrentQueue<Order>();
 
-ConcurrentBag<int> concurrentBag = new ConcurrentBag<int>();
+// Создание экземпляра OrderService
+OrderService orderService = new OrderService(orderQueue);
 
-Task[] tasks = new Task[3];
+// Генерация и добавление заказов в очередь
+Task[] tasks = new Task[5];
 
-// Два потока для добавления элементов
-tasks[0] = Task.Run(() => AddItems());
-tasks[1] = Task.Run(() => AddItems());
+// Имитируем добавление заказов несколькими пользователями
+for (int i = 0; i < 3; i++) // 3 потока для добавления заказов
+{
+    int userId = i + 1;
+    tasks[i] = Task.Run(() => orderService.AddOrders(userId));
+}
 
-// Один поток для извлечения элементов
-tasks[2] = Task.Run(() => ProcessItems());
+// Обработка заказов
+tasks[3] = Task.Run(() => orderService.ProcessOrders());
+tasks[4] = Task.Run(() => orderService.ProcessOrders());
 
+// Ждем завершения всех задач
 Task.WaitAll(tasks);
 
-Console.WriteLine("All tasks completed!");
+Console.WriteLine("Все заказы обработаны!");
 
-// Метод для добавления элементов в ConcurrentBag
-void AddItems()
-{
-    for (int i = 0; i < 5; i++)
-    {
-        concurrentBag.Add(i);
-        Console.WriteLine($"Added: {i}");
-        Thread.Sleep(100); // Задержка для демонстрации многопоточности
-    }
-}
-
-// Метод для обработки элементов из ConcurrentBag
-void ProcessItems()
-{
-    int item;
-    while (!concurrentBag.IsEmpty)
-    {
-        if (concurrentBag.TryTake(out item))
-        {
-            Console.WriteLine($"Processed: {item}");
-        }
-        Thread.Sleep(150); // Задержка для демонстрации многопоточности
-    }
-}
 
 Console.ReadLine();

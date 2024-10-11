@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "007_Average_TokenGeneration
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "008_Easy_Thread_safe_collections", "Easy_Thread_safe_collections\008_Easy_Thread_safe_collections.csproj", "{664D7856-5C80-43D7-9854-38FF139A61EC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy_Thread_safe_collections_2", "Easy_Thread_safe_collections_2\Easy_Thread_safe_collections_2.csproj", "{88D33FA6-5F5E-4968-BFB0-447B14AD35E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "009_Easy_Thread_safe_collections_2", "Easy_Thread_safe_collections_2\009_Easy_Thread_safe_collections_2.csproj", "{88D33FA6-5F5E-4968-BFB0-447B14AD35E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
