@@ -21,7 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "008_Easy_Thread_safe_collec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "009_Easy_Thread_safe_collections_2", "Easy_Thread_safe_collections_2\009_Easy_Thread_safe_collections_2.csproj", "{88D33FA6-5F5E-4968-BFB0-447B14AD35E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SynchronizationOfOrders", "SynchronizationOfOrders\SynchronizationOfOrders.csproj", "{255434C8-1DF1-49C8-B47D-52D3D34216FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "010_SynchronizationOfOrders", "SynchronizationOfOrders\010_SynchronizationOfOrders.csproj", "{255434C8-1DF1-49C8-B47D-52D3D34216FD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
