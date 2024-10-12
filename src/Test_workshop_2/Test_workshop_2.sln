@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "009_Easy_Thread_safe_collec
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "010_SynchronizationOfOrders", "SynchronizationOfOrders\010_SynchronizationOfOrders.csproj", "{255434C8-1DF1-49C8-B47D-52D3D34216FD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache_MemoryCache", "Cache_MemoryCache\Cache_MemoryCache.csproj", "{1874868D-F140-4625-9DC3-F84DA12E5464}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "011_Cache_MemoryCache", "Cache_MemoryCache\011_Cache_MemoryCache.csproj", "{1874868D-F140-4625-9DC3-F84DA12E5464}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cache_Average_MemoryCache", "Cache_Average_MemoryCache\Cache_Average_MemoryCache.csproj", "{8EFD17D9-97E9-4275-A79E-6C36F3961044}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{1874868D-F140-4625-9DC3-F84DA12E5464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1874868D-F140-4625-9DC3-F84DA12E5464}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1874868D-F140-4625-9DC3-F84DA12E5464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EFD17D9-97E9-4275-A79E-6C36F3961044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EFD17D9-97E9-4275-A79E-6C36F3961044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EFD17D9-97E9-4275-A79E-6C36F3961044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EFD17D9-97E9-4275-A79E-6C36F3961044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
