@@ -17,5 +17,4 @@ else
     Console.WriteLine("Data retrieved from cache: " + cachedData);
 }
 
-
 Console.ReadLine();
