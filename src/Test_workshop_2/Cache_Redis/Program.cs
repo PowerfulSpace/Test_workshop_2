@@ -27,8 +27,8 @@ else
     // Данных в кэше нет, загружаем их из базы данных
     user = userService.GetUserById(123);
 
-    // Сериализуем объект пользователя в строку и сохраняем его в Redis на 60 секунд
-    db.StringSet(cacheKey, JsonConvert.SerializeObject(user), TimeSpan.FromSeconds(60));
+    // Сериализуем объект пользователя в строку и сохраняем его в Redis на 3 минуты
+    db.StringSet(cacheKey, JsonConvert.SerializeObject(user), TimeSpan.FromMinutes(3));
 
     Console.WriteLine($"Пользователь загружен из базы данных и сохранён в Redis: {user.Name}, {user.Email}");
 }
