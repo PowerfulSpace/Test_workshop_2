@@ -1,5 +1,4 @@
-﻿
-using Cache_Redis.Models;
+﻿using Cache_Redis.Models;
 using Cache_Redis.Services;
 using Newtonsoft.Json;
 using StackExchange.Redis;
