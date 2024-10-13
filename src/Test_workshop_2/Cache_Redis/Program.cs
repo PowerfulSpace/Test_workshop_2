@@ -6,7 +6,6 @@ using StackExchange.Redis;
 ConnectionMultiplexer redis = ConnectionMultiplexer.Connect("localhost");
 
 
-
 string cacheKey = "user_123"; // Ключ для хранения данных конкретного пользователя
 User user;
 UserService userService = new UserService(); // Экземпляр сервиса
