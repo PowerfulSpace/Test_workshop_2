@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "013_Cache_Redis", "Cache_Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "014_Easy_Url_Shortener_App", "Easy_Url_Shortener_App\014_Easy_Url_Shortener_App.csproj", "{5AC962AA-0AC1-4E56-91F2-7A21D3DB3604}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp_RabbitMQ_Producer", "TestApp_RabbitMQ_Producer\TestApp_RabbitMQ_Producer.csproj", "{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{5AC962AA-0AC1-4E56-91F2-7A21D3DB3604}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AC962AA-0AC1-4E56-91F2-7A21D3DB3604}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AC962AA-0AC1-4E56-91F2-7A21D3DB3604}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
