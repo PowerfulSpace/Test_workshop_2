@@ -33,6 +33,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "014_Easy_Url_Shortener_App"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp_RabbitMQ_Producer", "TestApp_RabbitMQ_Producer\TestApp_RabbitMQ_Producer.csproj", "{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp_RabbitMQ_Consumer", "TestApp_RabbitMQ_Consumer\TestApp_RabbitMQ_Consumer.csproj", "{BB654B37-9ED4-460D-B61E-5CC9DE2ABAB7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB654B37-9ED4-460D-B61E-5CC9DE2ABAB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB654B37-9ED4-460D-B61E-5CC9DE2ABAB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB654B37-9ED4-460D-B61E-5CC9DE2ABAB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB654B37-9ED4-460D-B61E-5CC9DE2ABAB7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
