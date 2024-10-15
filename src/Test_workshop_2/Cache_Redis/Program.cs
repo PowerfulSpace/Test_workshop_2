@@ -15,11 +15,11 @@ UserService userService = new UserService(); // Экземпляр сервис�
 IDatabase db = redis.GetDatabase();
 
 // Пытаемся получить данные пользователя из кэша
-string cachedUser = db.StringGet(cacheKey);
+string cachedUser = db.StringGet(cacheKey)!;
 if (!string.IsNullOrEmpty(cachedUser))
 {
     // Данные пользователя найдены в кэше
-    user = JsonConvert.DeserializeObject<User>(cachedUser);
+    user = JsonConvert.DeserializeObject<User>(cachedUser)!;
     Console.WriteLine($"Пользователь получен из Redis: {user.Name}, {user.Email}");
 }
 else
@@ -38,10 +38,10 @@ Console.WriteLine("\nИмитируем повторный запрос...");
 Thread.Sleep(3000); // Подождем 3 секунды
 
 // Снова пытаемся получить пользователя из Redis
-cachedUser = db.StringGet(cacheKey);
+cachedUser = db.StringGet(cacheKey)!;
 if (!string.IsNullOrEmpty(cachedUser))
 {
-    user = JsonConvert.DeserializeObject<User>(cachedUser);
+    user = JsonConvert.DeserializeObject<User>(cachedUser)!;
     Console.WriteLine($"Повторно получен пользователь из Redis: {user.Name}, {user.Email}");
 }
 else
