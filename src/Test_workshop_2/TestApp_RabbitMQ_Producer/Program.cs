@@ -25,4 +25,5 @@ using (var channel = connection.CreateModel())
     Console.WriteLine($" [x] Sent {message}");
 }
 
+
 Console.ReadLine();
