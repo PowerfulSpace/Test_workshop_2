@@ -30,5 +30,3 @@ using (var channel = connection.CreateModel())
     Console.WriteLine(" Press [enter] to exit.");
     Console.ReadLine();
 }
-
-Console.ReadLine();
