@@ -2,6 +2,7 @@
 using Test_App_Easy_PostgreSQL.Data;
 using Test_App_Easy_PostgreSQL.Models;
 
+// Создавать бд, удалять, это не самая быстрая задача. Ограничить запуск этого приложения, до минимума
 using (ApplicationContext db = new ApplicationContext())
 {
     Console.WriteLine("Добро пожаловать!");
