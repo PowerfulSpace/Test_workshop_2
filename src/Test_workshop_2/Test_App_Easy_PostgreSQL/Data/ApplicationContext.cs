@@ -16,7 +16,7 @@ namespace Test_App_Easy_PostgreSQL.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "Host=localhost;Database=Test_BaseProject_DB;Username=your_username;Password=your_password;"; // Укажите правильные значения
+            string connectionString = "Host=localhost;Database=Test_App_Easy_PostgreSQL_DB;Username=postgres;Password=easypassword;"; // Укажите правильные значения
             optionsBuilder.UseNpgsql(connectionString);
         }
 
