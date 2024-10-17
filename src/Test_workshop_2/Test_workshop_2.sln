@@ -31,11 +31,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "013_Cache_Redis", "Cache_Re
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "014_Easy_Url_Shortener_App", "Easy_Url_Shortener_App\014_Easy_Url_Shortener_App.csproj", "{5AC962AA-0AC1-4E56-91F2-7A21D3DB3604}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp_RabbitMQ_Producer", "TestApp_RabbitMQ_Producer\TestApp_RabbitMQ_Producer.csproj", "{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "015_TestApp_RabbitMQ_Producer", "TestApp_RabbitMQ_Producer\015_TestApp_RabbitMQ_Producer.csproj", "{5B05CC08-EB9E-440B-AACB-ABC93CBA3363}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp_RabbitMQ_Consumer", "TestApp_RabbitMQ_Consumer\TestApp_RabbitMQ_Consumer.csproj", "{BB654B37-9ED4-460D-B61E-5CC9DE2ABAB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "015_TestApp_RabbitMQ_Consumer", "TestApp_RabbitMQ_Consumer\015_TestApp_RabbitMQ_Consumer.csproj", "{BB654B37-9ED4-460D-B61E-5CC9DE2ABAB7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "014_TestProject_Collor", "TestProject_Collor\014_TestProject_Collor.csproj", "{871A4B7E-A143-41CB-899C-45C4F00B6EAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_App_Easy_PostgreSQL", "Test_App_Easy_PostgreSQL\Test_App_Easy_PostgreSQL.csproj", "{32E252A3-78E7-4DF2-8D43-416F76BA41D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{871A4B7E-A143-41CB-899C-45C4F00B6EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{871A4B7E-A143-41CB-899C-45C4F00B6EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{871A4B7E-A143-41CB-899C-45C4F00B6EAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32E252A3-78E7-4DF2-8D43-416F76BA41D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32E252A3-78E7-4DF2-8D43-416F76BA41D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32E252A3-78E7-4DF2-8D43-416F76BA41D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32E252A3-78E7-4DF2-8D43-416F76BA41D3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
