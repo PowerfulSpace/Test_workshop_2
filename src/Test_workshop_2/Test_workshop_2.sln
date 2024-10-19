@@ -39,6 +39,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "014_TestProject_Collor", "T
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "016_Test_App_Easy_PostgreSQL", "Test_App_Easy_PostgreSQL\016_Test_App_Easy_PostgreSQL.csproj", "{32E252A3-78E7-4DF2-8D43-416F76BA41D3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_easy_App_Dapper", "Test_easy_App_Dapper\Test_easy_App_Dapper.csproj", "{54AD483C-3828-413A-87DD-9A92F8D4D014}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{32E252A3-78E7-4DF2-8D43-416F76BA41D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32E252A3-78E7-4DF2-8D43-416F76BA41D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32E252A3-78E7-4DF2-8D43-416F76BA41D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54AD483C-3828-413A-87DD-9A92F8D4D014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54AD483C-3828-413A-87DD-9A92F8D4D014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54AD483C-3828-413A-87DD-9A92F8D4D014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54AD483C-3828-413A-87DD-9A92F8D4D014}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
