@@ -7,6 +7,11 @@ namespace Test_app_SQLiete.Data
     {
         public DbSet<User> Users { get; set; }
 
+        public AppDbContext()
+        {
+            
+        }
+
         // Конструктор, который принимает DbContextOptions
         public AppDbContext(DbContextOptions<AppDbContext> options)
             : base(options)
