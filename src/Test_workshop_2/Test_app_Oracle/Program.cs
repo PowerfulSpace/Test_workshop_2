@@ -1,7 +1,7 @@
 ﻿// Строка подключения к базе данных
 using Oracle.ManagedDataAccess.Client;
 
-string connString = "User Id=SYSTEM;Password=your_password;Data Source=localhost:1521/xe";
+string connString = "User Id=SYSTEM;Password=easypassword;Data Source=localhost:1521/xe";
 
 // Создаем подключение
 using (OracleConnection conn = new OracleConnection(connString))
@@ -36,3 +36,5 @@ using (OracleConnection conn = new OracleConnection(connString))
         Console.WriteLine("Подключение закрыто.");
     }
 }
+
+Console.ReadLine();
