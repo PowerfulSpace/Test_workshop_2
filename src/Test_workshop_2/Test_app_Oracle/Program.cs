@@ -1,7 +1,4 @@
-﻿
-
-
-// Строка подключения к базе данных
+﻿// Строка подключения к базе данных
 using Oracle.ManagedDataAccess.Client;
 
 string connString = "User Id=SYSTEM;Password=your_password;Data Source=localhost:1521/xe";
