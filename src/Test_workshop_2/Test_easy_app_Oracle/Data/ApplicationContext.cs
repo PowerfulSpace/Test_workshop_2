@@ -16,7 +16,7 @@ namespace Test_easy_app_Oracle.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            string connectionString = "User Id=SYSTEM;Password=easypassword;Data Source=localhost:1521/XE"; // Укажите правильные значения
+            string connectionString = "User Id=test_user;Password=test_password;Data Source=localhost:1521/XEPDB1;"; // Укажите правильные значения
             optionsBuilder.UseOracle(connectionString);
         }
 
