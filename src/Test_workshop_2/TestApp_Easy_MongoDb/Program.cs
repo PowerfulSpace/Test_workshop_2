@@ -12,7 +12,7 @@ var database = client.GetDatabase("testdb");
 var collection = database.GetCollection<User>("users");
 
 // Создаем нового пользователя
-var newUser = new User { Name = "Alice", Age = 25 };
+var newUser = new User { Name = "Alice1", Age = 26 };
 
 // Вставляем документ в коллекцию
 await collection.InsertOneAsync(newUser);
@@ -26,3 +26,5 @@ foreach (var user in users)
 }
 
 Console.WriteLine("Done");
+
+Console.ReadLine();
