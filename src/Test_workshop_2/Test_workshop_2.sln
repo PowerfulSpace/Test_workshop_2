@@ -47,9 +47,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "019_Test_app_Oracle", "Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "020_Test_easy_app_Oracle", "Test_easy_app_Oracle\020_Test_easy_app_Oracle.csproj", "{84FF36CB-BDD9-47DB-B9AC-F6F8AEE7A3E6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp_Easy_MongoDb", "TestApp_Easy_MongoDb\TestApp_Easy_MongoDb.csproj", "{3D02A4C8-1890-49A2-89E2-D4EB72FD1B3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "021_TestApp_Easy_MongoDb", "TestApp_Easy_MongoDb\021_TestApp_Easy_MongoDb.csproj", "{3D02A4C8-1890-49A2-89E2-D4EB72FD1B3E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp_Middle_MongoDb", "TestApp_Middle_MongoDb\TestApp_Middle_MongoDb.csproj", "{A0B5734F-231C-48D5-AB7F-A7714F1057E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "022_TestApp_Middle_MongoDb", "TestApp_Middle_MongoDb\022_TestApp_Middle_MongoDb.csproj", "{A0B5734F-231C-48D5-AB7F-A7714F1057E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_app_MySQL", "Test_app_MySQL\Test_app_MySQL.csproj", "{0123D794-5643-4DC8-842B-AAD377BCDDBA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{A0B5734F-231C-48D5-AB7F-A7714F1057E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0B5734F-231C-48D5-AB7F-A7714F1057E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0B5734F-231C-48D5-AB7F-A7714F1057E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0123D794-5643-4DC8-842B-AAD377BCDDBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0123D794-5643-4DC8-842B-AAD377BCDDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0123D794-5643-4DC8-842B-AAD377BCDDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0123D794-5643-4DC8-842B-AAD377BCDDBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
