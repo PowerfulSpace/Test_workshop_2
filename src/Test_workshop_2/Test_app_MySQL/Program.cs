@@ -1,5 +1,8 @@
 ﻿using MySql.Data.MySqlClient;
 
+
+
+
 string connectionString = "Server=localhost;Database=sampledb;User ID=root;Password=your_password;";
 
 using (var connection = new MySqlConnection(connectionString))
