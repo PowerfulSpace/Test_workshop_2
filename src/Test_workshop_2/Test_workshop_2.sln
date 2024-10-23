@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "021_TestApp_Easy_MongoDb", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "022_TestApp_Middle_MongoDb", "TestApp_Middle_MongoDb\022_TestApp_Middle_MongoDb.csproj", "{A0B5734F-231C-48D5-AB7F-A7714F1057E5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_app_MySQL", "Test_app_MySQL\Test_app_MySQL.csproj", "{0123D794-5643-4DC8-842B-AAD377BCDDBA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "023_Test_app_MySQL", "Test_app_MySQL\023_Test_app_MySQL.csproj", "{0123D794-5643-4DC8-842B-AAD377BCDDBA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ElkLoggerApp", "Test_ElkLoggerApp\Test_ElkLoggerApp.csproj", "{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{0123D794-5643-4DC8-842B-AAD377BCDDBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0123D794-5643-4DC8-842B-AAD377BCDDBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0123D794-5643-4DC8-842B-AAD377BCDDBA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
