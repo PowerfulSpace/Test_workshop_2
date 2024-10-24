@@ -2,6 +2,8 @@
 using Serilog;
 using Serilog.Sinks.Elasticsearch;
 
+
+
 // Настройка Serilog для отправки данных в Elasticsearch
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()  // Логи выводятся в консоль
