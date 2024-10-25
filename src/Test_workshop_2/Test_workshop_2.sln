@@ -53,7 +53,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "022_TestApp_Middle_MongoDb"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "023_Test_app_MySQL", "Test_app_MySQL\023_Test_app_MySQL.csproj", "{0123D794-5643-4DC8-842B-AAD377BCDDBA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_ElkLoggerApp", "Test_ElkLoggerApp\Test_ElkLoggerApp.csproj", "{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "024_Test_ElkLoggerApp", "Test_ElkLoggerApp\024_Test_ElkLoggerApp.csproj", "{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
