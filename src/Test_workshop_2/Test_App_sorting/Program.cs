@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿int[] numbers = { 3, 12, 4, 10 };
+var orderedNumbers = from i in numbers
+                     orderby i
+                     select i;
+foreach (int i in orderedNumbers)
+    Console.WriteLine(i);
