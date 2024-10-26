@@ -4,3 +4,5 @@ var orderedNumbers = from i in numbers
                      select i;
 foreach (int i in orderedNumbers)
     Console.WriteLine(i);
+
+Console.ReadLine();
