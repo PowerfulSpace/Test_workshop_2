@@ -1,5 +1,5 @@
 ﻿
-string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill" };
+string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill", "Bob", "Sam", "Tim", "Tomas", "Bill", "Bob", "Sam", "Tim", "Tomas", "Bill" };
 
 // создаем новый список для результатов
 var selectedPeople = from p in people // передаем каждый элемент из people в переменную p
