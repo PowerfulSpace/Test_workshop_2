@@ -1,7 +1,4 @@
-﻿
-
-string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill" };
-
+﻿string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill" };
 
 var selectedPeople = new List<string>();
 
@@ -16,6 +13,5 @@ selectedPeople.Sort();
 
 foreach (string person in selectedPeople)
     Console.WriteLine(person);
-
 
 Console.ReadLine();
