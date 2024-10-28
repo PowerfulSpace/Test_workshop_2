@@ -1,9 +1,21 @@
 ﻿
 
-int[] numbers = { 3, 12, 4, 10 };
-var orderedNumbers = numbers.OrderBy(n => n);
-foreach (int i in orderedNumbers)
-    Console.WriteLine(i);
+string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill" };
+
+// создаем новый список для результатов
+var selectedPeople = new List<string>();
+// проходим по массиву
+foreach (string person in people)
+{
+    // если строка начинается на букву T, добавляем в список
+    if (person.ToUpper().StartsWith("T"))
+        selectedPeople.Add(person);
+}
+// сортируем список
+selectedPeople.Sort();
+
+foreach (string person in selectedPeople)
+    Console.WriteLine(person);
 
 
 Console.ReadLine();
