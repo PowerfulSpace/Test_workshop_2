@@ -1,12 +1,56 @@
-﻿
-string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill"};
+﻿// Базовый класс
+public class BankAccount
+{
+    public decimal Balance { get; protected set; }
 
+    public virtual void Deposit(decimal amount)
+    {
+        if (amount <= 0)
+        {
+            throw new ArgumentException("Сумма должна быть положительной.");
+        }
+        Balance += amount;
+    }
 
-var selectedPeople = from p in people // передаем каждый элемент из people в переменную p
-                     where p.ToUpper().StartsWith("T") //фильтрация по критерию
-                     orderby p  // упорядочиваем по возрастанию
-                     select p; // выбираем объект в создаваемую коллекцию
+    public virtual void Withdraw(decimal amount)
+    {
+        if (amount <= 0)
+        {
+            throw new ArgumentException("Сумма должна быть положительной.");
+        }
+        if (amount > Balance)
+        {
+            throw new InvalidOperationException("Недостаточно средств.");
+        }
+        Balance -= amount;
+    }
+}
 
-foreach (string person in selectedPeople)
-    Console.WriteLine(person);
-Console.ReadLine();
+// Подкласс для сберегательного счета
+public class SavingsAccount : BankAccount
+{
+    public decimal InterestRate { get; set; }
+
+    public void AddInterest()
+    {
+        Balance += Balance * InterestRate;
+    }
+}
+
+// Подкласс для расчетного счета
+public class CheckingAccount : BankAccount
+{
+    public override void Withdraw(decimal amount)
+    {
+        // Разрешаем овердрафт
+        if (amount <= 0)
+        {
+            throw new ArgumentException("Сумма должна быть положительной.");
+        }
+        if (amount > Balance)
+        {
+            throw new InvalidOperationException("Недостаточно средств.");
+        }
+        Balance -= amount;
+    }
+}
