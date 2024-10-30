@@ -1,4 +1,4 @@
-﻿// Базовый класс
+﻿
 public class BankAccount
 {
     public decimal Balance { get; protected set; }
@@ -26,7 +26,7 @@ public class BankAccount
     }
 }
 
-// Подкласс для сберегательного счета
+
 public class SavingsAccount : BankAccount
 {
     public decimal InterestRate { get; set; }
@@ -37,7 +37,7 @@ public class SavingsAccount : BankAccount
     }
 }
 
-// Подкласс для расчетного счета
+
 public class CheckingAccount : BankAccount
 {
     public override void Withdraw(decimal amount)
