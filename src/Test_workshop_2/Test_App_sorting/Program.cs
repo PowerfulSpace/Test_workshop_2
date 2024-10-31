@@ -1,5 +1,4 @@
-﻿
-public class BankAccount
+﻿public class BankAccount
 {
     public decimal Balance { get; protected set; }
 
@@ -25,8 +24,6 @@ public class BankAccount
         Balance -= amount;
     }
 }
-
-
 public class SavingsAccount : BankAccount
 {
     public decimal InterestRate { get; set; }
@@ -36,7 +33,6 @@ public class SavingsAccount : BankAccount
         Balance += Balance * InterestRate;
     }
 }
-
 
 public class CheckingAccount : BankAccount
 {
