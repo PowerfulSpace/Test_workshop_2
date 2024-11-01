@@ -34,19 +34,3 @@ public class SavingsAccount : BankAccount
     }
 }
 
-public class CheckingAccount : BankAccount
-{
-    public override void Withdraw(decimal amount)
-    {
-        // Разрешаем овердрафт
-        if (amount <= 0)
-        {
-            throw new ArgumentException("Сумма должна быть положительной.");
-        }
-        if (amount > Balance)
-        {
-            throw new InvalidOperationException("Недостаточно средств.");
-        }
-        Balance -= amount;
-    }
-}
