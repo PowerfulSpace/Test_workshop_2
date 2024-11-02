@@ -13,7 +13,7 @@ Console.WriteLine("Отсортированный массив: {0}", string.Joi
 Console.ReadLine();
 
 
-//метод обмена элементов
+
 static void Swap(ref int e1, ref int e2)
 {
     var temp = e1;
@@ -21,7 +21,7 @@ static void Swap(ref int e1, ref int e2)
     e2 = temp;
 }
 
-//сортировка пузырьком
+
 static int[] BubbleSort(int[] array)
 {
     var len = array.Length;
