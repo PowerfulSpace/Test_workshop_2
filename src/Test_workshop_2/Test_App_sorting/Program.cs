@@ -1,39 +1,27 @@
-﻿Console.WriteLine("Сортировка пузырьком");
-Console.Write("Введите элементы массива: ");
-var parts = Console.ReadLine().Split(new[] { " ", ",", ";" }, StringSplitOptions.RemoveEmptyEntries);
-var array = new int[parts.Length];
-for (int i = 0; i < parts.Length; i++)
+﻿
+
+// Укажите путь, по которому будет сохранен файл
+using OfficeOpenXml;
+
+
+string filePath = "example.xlsx";
+
+// Убедитесь, что EPPlus лицензирован для работы
+ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+
+using (var package = new ExcelPackage())
 {
-    array[i] = Convert.ToInt32(parts[i]);
+    // Создаем новый лист
+    var worksheet = package.Workbook.Worksheets.Add("Sheet1");
+
+    // Добавляем данные в таблицу
+    worksheet.Cells[1, 1].Value = "Имя";
+    worksheet.Cells[1, 2].Value = "Возраст";
+    worksheet.Cells[2, 1].Value = "Алексей";
+    worksheet.Cells[2, 2].Value = 29;
+
+    // Сохраняем файл
+    File.WriteAllBytes(filePath, package.GetAsByteArray());
 }
 
-Console.WriteLine("Отсортированный массив: {0}", string.Join(", ", BubbleSort(array)));
-
-Console.ReadLine();
-
-
-
-static void Swap(ref int e1, ref int e2)
-{
-    var temp = e1;
-    e1 = e2;
-    e2 = temp;
-}
-
-
-static int[] BubbleSort(int[] array)
-{
-    var len = array.Length;
-    for (var i = 1; i < len; i++)
-    {
-        for (var j = 0; j < len - i; j++)
-        {
-            if (array[j] > array[j + 1])
-            {
-                Swap(ref array[j], ref array[j + 1]);
-            }
-        }
-    }
-
-    return array;
-}
+Console.WriteLine("Файл сохранен как " + filePath);
