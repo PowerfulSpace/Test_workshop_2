@@ -24,4 +24,16 @@ using (var package = new ExcelPackage())
 
 Console.WriteLine("Файл сохранен как " + filePath);
 
+
+int a = 1; int b = 2;
+TestMethod(ref a, out b);
+
+
 Console.ReadLine();
+
+
+void TestMethod(out int a,ref int b)
+{
+    a = 1;
+    Console.WriteLine();
+}
