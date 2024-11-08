@@ -1,6 +1,4 @@
-﻿
-
-// Укажите путь, по которому будет сохранен файл
+﻿// Укажите путь, по которому будет сохранен файл
 using OfficeOpenXml;
 
 
@@ -25,3 +23,5 @@ using (var package = new ExcelPackage())
 }
 
 Console.WriteLine("Файл сохранен как " + filePath);
+
+Console.ReadLine();
