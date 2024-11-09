@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_AutoRe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_AsyncAutoResetEvent_Async", "Test_Synchronization_AsyncAutoResetEvent_Async\Test_Synchronization_AsyncAutoResetEvent_Async.csproj", "{A25850D4-6DED-4219-80E4-3460D723440B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_AsyncManualResetEvent_Async", "Test_Synchronization_AsyncManualResetEvent_Async\Test_Synchronization_AsyncManualResetEvent_Async.csproj", "{C7549D3C-B6D9-428B-8AE7-5D1F856FF39B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +215,10 @@ Global
 		{A25850D4-6DED-4219-80E4-3460D723440B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A25850D4-6DED-4219-80E4-3460D723440B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A25850D4-6DED-4219-80E4-3460D723440B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7549D3C-B6D9-428B-8AE7-5D1F856FF39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7549D3C-B6D9-428B-8AE7-5D1F856FF39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7549D3C-B6D9-428B-8AE7-5D1F856FF39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7549D3C-B6D9-428B-8AE7-5D1F856FF39B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
