@@ -26,7 +26,7 @@ Console.WriteLine("Файл сохранен как " + filePath);
 
 
 int a = 1; int b = 2;
-TestMethod(ref a, out b);
+TestMethod(out a, ref b);
 
 
 Console.ReadLine();
