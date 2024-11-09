@@ -19,7 +19,7 @@ await Task.WhenAll(printTasks); // Ожидаем завершения всех 
 printer.ResetPrinting();
 Console.WriteLine("Ready for new print jobs.");
 
-
+Console.ReadLine();
 
 
 public class AsyncManualResetEvent
