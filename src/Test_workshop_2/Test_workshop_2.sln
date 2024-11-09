@@ -65,6 +65,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_Mutex"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_SemaphoreSlim_Async", "Test_Synchronization_SemaphoreSlim_Async\Test_Synchronization_SemaphoreSlim_Async.csproj", "{952A570E-A49C-48F2-8FE9-39D0B7E37EA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_SemaphoreSlim", "Test_Synchronization_SemaphoreSlim\Test_Synchronization_SemaphoreSlim.csproj", "{66C90D7B-735A-43EA-B331-1C88CB14AE99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -195,6 +197,10 @@ Global
 		{952A570E-A49C-48F2-8FE9-39D0B7E37EA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{952A570E-A49C-48F2-8FE9-39D0B7E37EA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{952A570E-A49C-48F2-8FE9-39D0B7E37EA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66C90D7B-735A-43EA-B331-1C88CB14AE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66C90D7B-735A-43EA-B331-1C88CB14AE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66C90D7B-735A-43EA-B331-1C88CB14AE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66C90D7B-735A-43EA-B331-1C88CB14AE99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
