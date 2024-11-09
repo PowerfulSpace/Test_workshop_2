@@ -1,4 +1,28 @@
-﻿public class AsyncManualResetEvent
+﻿
+Printer printer = new Printer();
+
+// Создаём задачи печати
+var printTasks = new[]
+{
+            printer.PrintDocumentAsync("Document1"),
+            printer.PrintDocumentAsync("Document2")
+        };
+
+Console.WriteLine("Waiting for user permission to print...");
+// Симулируем задержку перед получением разрешения на печать
+await Task.Delay(3000);
+printer.AllowPrinting(); // Разрешаем печать
+
+await Task.WhenAll(printTasks); // Ожидаем завершения всех задач печати
+
+// Сбрасываем печать для новых задач
+printer.ResetPrinting();
+Console.WriteLine("Ready for new print jobs.");
+
+
+
+
+public class AsyncManualResetEvent
 {
     private TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
 
@@ -41,22 +65,3 @@ public class Printer
     }
 }
 
-Printer printer = new Printer();
-
-// Создаём задачи печати
-var printTasks = new[]
-{
-            printer.PrintDocumentAsync("Document1"),
-            printer.PrintDocumentAsync("Document2")
-        };
-
-Console.WriteLine("Waiting for user permission to print...");
-// Симулируем задержку перед получением разрешения на печать
-await Task.Delay(3000);
-printer.AllowPrinting(); // Разрешаем печать
-
-await Task.WhenAll(printTasks); // Ожидаем завершения всех задач печати
-
-// Сбрасываем печать для новых задач
-printer.ResetPrinting();
-Console.WriteLine("Ready for new print jobs.");
