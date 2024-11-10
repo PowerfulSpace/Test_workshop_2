@@ -55,25 +55,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "023_Test_app_MySQL", "Test_
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "024_Test_ElkLoggerApp", "Test_ElkLoggerApp\024_Test_ElkLoggerApp.csproj", "{F25B8516-ADAF-46E0-9322-EE5B1FA5EA4B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_App_sorting", "Test_App_sorting\Test_App_sorting.csproj", "{9292491D-B61F-40A3-A4CA-4D1086DD0DDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "026_Test_App_sorting", "Test_App_sorting\026_Test_App_sorting.csproj", "{9292491D-B61F-40A3-A4CA-4D1086DD0DDB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FileWriter_Test_Pattern_Finalize", "FileWriter_Test_Pattern_Finalize\FileWriter_Test_Pattern_Finalize.csproj", "{5E11D452-7E2F-4767-9212-01354982BA82}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "025_FileWriter_Test_Pattern_Finalize", "FileWriter_Test_Pattern_Finalize\025_FileWriter_Test_Pattern_Finalize.csproj", "{5E11D452-7E2F-4767-9212-01354982BA82}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_Synchronization_AsyncManualResetEvent", "Test_Synchronization_AsyncManualResetEvent\Test_Synchronization_AsyncManualResetEvent.csproj", "{9448C558-1C6D-49F9-A0E2-3FAEA2C062C6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "027_Test_Synchronization_Mutex", "Test_Synchronization_Mutex\027_Test_Synchronization_Mutex.csproj", "{E71F96C0-BC5D-4061-B69A-83EEAA65CC67}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_Mutex", "Test_Synchronization_Mutex\Test_Synchronization_Mutex.csproj", "{E71F96C0-BC5D-4061-B69A-83EEAA65CC67}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "029_Test_Synchronization_SemaphoreSlim_Async", "Test_Synchronization_SemaphoreSlim_Async\029_Test_Synchronization_SemaphoreSlim_Async.csproj", "{952A570E-A49C-48F2-8FE9-39D0B7E37EA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_SemaphoreSlim_Async", "Test_Synchronization_SemaphoreSlim_Async\Test_Synchronization_SemaphoreSlim_Async.csproj", "{952A570E-A49C-48F2-8FE9-39D0B7E37EA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "028_Test_Synchronization_SemaphoreSlim", "Test_Synchronization_SemaphoreSlim\028_Test_Synchronization_SemaphoreSlim.csproj", "{66C90D7B-735A-43EA-B331-1C88CB14AE99}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_SemaphoreSlim", "Test_Synchronization_SemaphoreSlim\Test_Synchronization_SemaphoreSlim.csproj", "{66C90D7B-735A-43EA-B331-1C88CB14AE99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "030_Test_Synchronization_AutoResetEvent", "Test_Synchronization_AutoResetEvent\030_Test_Synchronization_AutoResetEvent.csproj", "{23DF3858-08A1-4B43-B957-670E8B2C85C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_AutoResetEvent", "Test_Synchronization_AutoResetEvent\Test_Synchronization_AutoResetEvent.csproj", "{23DF3858-08A1-4B43-B957-670E8B2C85C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "031_Test_Synchronization_AsyncAutoResetEvent_Async", "Test_Synchronization_AsyncAutoResetEvent_Async\031_Test_Synchronization_AsyncAutoResetEvent_Async.csproj", "{A25850D4-6DED-4219-80E4-3460D723440B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_AsyncAutoResetEvent_Async", "Test_Synchronization_AsyncAutoResetEvent_Async\Test_Synchronization_AsyncAutoResetEvent_Async.csproj", "{A25850D4-6DED-4219-80E4-3460D723440B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "033_Test_Synchronization_AsyncManualResetEvent_Async", "Test_Synchronization_AsyncManualResetEvent_Async\033_Test_Synchronization_AsyncManualResetEvent_Async.csproj", "{C7549D3C-B6D9-428B-8AE7-5D1F856FF39B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_AsyncManualResetEvent_Async", "Test_Synchronization_AsyncManualResetEvent_Async\Test_Synchronization_AsyncManualResetEvent_Async.csproj", "{C7549D3C-B6D9-428B-8AE7-5D1F856FF39B}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_Synchronization_ManualResetEvent", "Test_Synchronization_ManualResetEvent\Test_Synchronization_ManualResetEvent.csproj", "{16EFCFE8-6F9F-4A05-86CA-3FF89857CCA5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "032_Test_Synchronization_ManualResetEvent", "Test_Synchronization_ManualResetEvent\032_Test_Synchronization_ManualResetEvent.csproj", "{16EFCFE8-6F9F-4A05-86CA-3FF89857CCA5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -193,10 +191,6 @@ Global
 		{5E11D452-7E2F-4767-9212-01354982BA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E11D452-7E2F-4767-9212-01354982BA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E11D452-7E2F-4767-9212-01354982BA82}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9448C558-1C6D-49F9-A0E2-3FAEA2C062C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9448C558-1C6D-49F9-A0E2-3FAEA2C062C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9448C558-1C6D-49F9-A0E2-3FAEA2C062C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9448C558-1C6D-49F9-A0E2-3FAEA2C062C6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E71F96C0-BC5D-4061-B69A-83EEAA65CC67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E71F96C0-BC5D-4061-B69A-83EEAA65CC67}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E71F96C0-BC5D-4061-B69A-83EEAA65CC67}.Release|Any CPU.ActiveCfg = Release|Any CPU
