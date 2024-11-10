@@ -1,76 +1,104 @@
 ﻿
 
-var manualResetEvent = new AsyncManualResetEvent(false); // Начальное состояние — несигнальное
+var account = new BankAccount(1000);
 
-// Запускаем задачи, ожидающие сигнала
-var task1 = Task.Run(async () =>
+// Запуск асинхронных задач для депозита и снятия средств
+var t1 = Task.Run(async () =>
 {
-    Console.WriteLine("Task 1 is waiting for the signal...");
-    await manualResetEvent.WaitAsync();
-    Console.WriteLine("Task 1 received the signal and is continuing.");
+    for (int i = 0; i < 3; i++)
+        await account.Deposit(200);
 });
 
-var task2 = Task.Run(async () =>
+var t2 = Task.Run(async () =>
 {
-    Console.WriteLine("Task 2 is waiting for the signal...");
-    await manualResetEvent.WaitAsync();
-    Console.WriteLine("Task 2 received the signal and is continuing.");
+    for (int i = 0; i < 3; i++)
+        await account.Withdraw(150);
 });
 
-await Task.Delay(1000);
-Console.WriteLine("Main thread sets the signal.");
-manualResetEvent.Set(); // Все ожидающие задачи получают сигнал и продолжают выполнение
+// Ожидание завершения всех задач
+await Task.WhenAll(t1, t2);
+Console.ReadLine();
 
-await Task.Delay(1000);
-Console.WriteLine("Main thread resets the signal.");
-manualResetEvent.Reset(); // Сбрасываем событие
 
-// Новая задача, которая будет ожидать сигнала
-var task3 = Task.Run(async () =>
+
+class BankAccount
 {
-    Console.WriteLine("Task 3 is waiting for the signal...");
-    await manualResetEvent.WaitAsync();
-    Console.WriteLine("Task 3 received the signal and is continuing.");
-});
+    private decimal balance;
+    private AsyncManualResetEvent asyncManualResetEvent = new AsyncManualResetEvent(false); // Инициализируем как несигнальное
 
-await Task.Delay(1000);
-Console.WriteLine("Main thread sets the signal again.");
-manualResetEvent.Set(); // Теперь task3 продолжает выполнение
+    public BankAccount(decimal initialBalance)
+    {
+        balance = initialBalance;
+    }
 
-await Task.WhenAll(task1, task2, task3);
+    public async Task Deposit(decimal amount)
+    {
+        await asyncManualResetEvent.WaitAsync(); // Ожидаем сигнала, чтобы начать операцию
+        try
+        {
+            Console.WriteLine($"{Task.CurrentId} is depositing {amount}");
+            await Task.Delay(500); // Симуляция работы
+            balance += amount;
+            Console.WriteLine($"New balance after deposit: {balance}");
+        }
+        finally
+        {
+            asyncManualResetEvent.Set(); // Позволяем другим задачам работать
+        }
+    }
 
+    public async Task Withdraw(decimal amount)
+    {
+        await asyncManualResetEvent.WaitAsync(); // Ожидаем сигнала, чтобы начать операцию
+        try
+        {
+            Console.WriteLine($"{Task.CurrentId} is withdrawing {amount}");
+            await Task.Delay(500); // Симуляция работы
+            if (balance >= amount)
+            {
+                balance -= amount;
+                Console.WriteLine($"New balance after withdrawal: {balance}");
+            }
+            else
+            {
+                Console.WriteLine("Insufficient funds for withdrawal");
+            }
+        }
+        finally
+        {
+            asyncManualResetEvent.Set(); // Позволяем другим задачам работать
+        }
+    }
+}
+
+// Асинхронный аналог ManualResetEvent
 public class AsyncManualResetEvent
 {
-    private volatile TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
+    private TaskCompletionSource<bool> tcs = new TaskCompletionSource<bool>();
 
-    public AsyncManualResetEvent(bool initialState = false)
+    public AsyncManualResetEvent(bool initialState)
     {
         if (initialState)
         {
-            tcs.SetResult(true); // Инициализируем в сигнальном состоянии, если требуется
+            tcs.SetResult(true); // Сигнальное состояние
         }
     }
 
     public Task WaitAsync()
     {
-        return tcs.Task; // Ожидание завершения задачи
+        var t = tcs.Task;
+        if (t.IsCompleted)
+        {
+            tcs = new TaskCompletionSource<bool>(); // Сбрасываем на несигнальное состояние
+        }
+        return t;
     }
 
     public void Set()
     {
-        // Устанавливаем событие в сигнальное состояние
         if (!tcs.Task.IsCompleted)
         {
-            tcs.SetResult(true); // Завершаем задачу, позволяя всем ожидающим продолжить выполнение
-        }
-    }
-
-    public void Reset()
-    {
-        // Сбрасываем событие в несигнальное состояние
-        if (tcs.Task.IsCompleted)
-        {
-            tcs = new TaskCompletionSource<bool>(); // Создаем новую задачу, возвращая в несигнальное состояние
+            tcs.SetResult(true); // Устанавливаем в сигнальное состояние
         }
     }
 }
