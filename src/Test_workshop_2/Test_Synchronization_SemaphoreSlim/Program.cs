@@ -23,12 +23,6 @@ t2.Join();
 class BankAccount
 {
 
-    public BankAccount(decimal initialBalance)
-    {
-        balance = initialBalance;
-    }
-
-
 
 
 }
