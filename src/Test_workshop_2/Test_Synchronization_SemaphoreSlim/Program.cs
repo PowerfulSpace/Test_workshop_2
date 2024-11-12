@@ -45,25 +45,5 @@ class BankAccount
         }
     }
 
-    public void Withdraw(decimal amount)
-    {
-        semaphore.Wait(); // Захватываем семафор синхронно
-        try
-        {
-            Console.WriteLine($"{Thread.CurrentThread.Name} is withdrawing {amount}");
-            if (balance >= amount)
-            {
-                balance -= amount;
-                Console.WriteLine($"New balance after withdrawal: {balance}");
-            }
-            else
-            {
-                Console.WriteLine("Insufficient funds for withdrawal");
-            }
-        }
-        finally
-        {
-            semaphore.Release(); // Обязательно освобождаем семафор
-        }
-    }
+
 }
