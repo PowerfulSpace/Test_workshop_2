@@ -30,20 +30,7 @@ class BankAccount
         balance = initialBalance;
     }
 
-    public void Deposit(decimal amount)
-    {
-        semaphore.Wait(); // Захватываем семафор синхронно
-        try
-        {
-            Console.WriteLine($"{Thread.CurrentThread.Name} is depositing {amount}");
-            balance += amount;
-            Console.WriteLine($"New balance after deposit: {balance}");
-        }
-        finally
-        {
-            semaphore.Release(); // Обязательно освобождаем семафор
-        }
-    }
+
 
 
 }
