@@ -1,6 +1,4 @@
 ﻿
-
-
 var account = new BankAccount(1000);
 
 Thread t1 = new Thread(() =>
