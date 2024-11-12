@@ -22,8 +22,6 @@ t2.Join();
 
 class BankAccount
 {
-    private decimal balance;
-    private SemaphoreSlim semaphore = new SemaphoreSlim(1, 1); // Разрешаем только одному потоку выполнять операции
 
     public BankAccount(decimal initialBalance)
     {
