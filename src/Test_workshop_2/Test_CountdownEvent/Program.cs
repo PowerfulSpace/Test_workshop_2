@@ -11,6 +11,9 @@ Console.WriteLine("Главный поток ждет завершения 10 о
 countdown.Wait();
 Console.WriteLine("10 операций выполнены. Главный поток продолжает работу.");
 
+
+Console.ReadLine();
+
 void DoWork(int id)
 {
     Console.WriteLine($"Поток {id} начинает работу.");
