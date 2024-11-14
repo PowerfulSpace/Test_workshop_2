@@ -28,16 +28,18 @@ Console.ReadLine();
 
 void Increment()
 {
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 20; i++)
     {
         Interlocked.Increment(ref counter);
+        Console.WriteLine(counter);
     }
 }
 
 void Decrement()
 {
-    for (int i = 0; i < 1000; i++)
+    for (int i = 0; i < 20; i++)
     {
         Interlocked.Decrement(ref counter);
+        Console.WriteLine(counter);
     }
 }
