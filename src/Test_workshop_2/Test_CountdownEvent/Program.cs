@@ -14,12 +14,3 @@ Console.WriteLine("10 операций выполнены. Главный пот
 
 Console.ReadLine();
 
-void DoWork(int id)
-{
-    Console.WriteLine($"Поток {id} начинает работу.");
-    Thread.Sleep(new Random().Next(500, 2000)); // Симуляция работы
-    Console.WriteLine($"Поток {id} завершил работу.");
-
-    // Сигнализируем о завершении работы
-    countdown.Signal();
-}
