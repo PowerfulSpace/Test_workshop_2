@@ -9,7 +9,7 @@ for (int i = 0; i < 10; i++)
 
 Console.WriteLine("Главный поток ждет завершения 10 операций.");
 countdown.Wait();
-Console.WriteLine("10 операций выполнены. Главный поток продолжает работу.");
+
 
 
 Console.ReadLine();
