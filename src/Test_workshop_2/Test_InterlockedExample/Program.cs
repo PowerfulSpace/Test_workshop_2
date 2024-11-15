@@ -1,6 +1,4 @@
 ﻿
-
-
 int counter = 0;
 
 Thread[] threads = new Thread[10];
