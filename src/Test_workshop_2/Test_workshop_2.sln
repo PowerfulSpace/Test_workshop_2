@@ -73,11 +73,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "033_Test_Synchronization_As
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "032_Test_Synchronization_ManualResetEvent", "Test_Synchronization_ManualResetEvent\032_Test_Synchronization_ManualResetEvent.csproj", "{16EFCFE8-6F9F-4A05-86CA-3FF89857CCA5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_BarrierExample", "Test_BarrierExample\Test_BarrierExample.csproj", "{CDD6329E-4EF3-4886-B6BD-8E6DC8FC1E91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "034_Test_BarrierExample", "Test_BarrierExample\034_Test_BarrierExample.csproj", "{CDD6329E-4EF3-4886-B6BD-8E6DC8FC1E91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_CountdownEvent", "Test_CountdownEvent\Test_CountdownEvent.csproj", "{796D12B1-5A01-4653-95BE-7633B6A1839E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "035_Test_CountdownEvent", "Test_CountdownEvent\035_Test_CountdownEvent.csproj", "{796D12B1-5A01-4653-95BE-7633B6A1839E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_InterlockedExample", "Test_InterlockedExample\Test_InterlockedExample.csproj", "{261249D9-A26B-4940-942F-083D6674FB5B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "036_Test_InterlockedExample", "Test_InterlockedExample\036_Test_InterlockedExample.csproj", "{261249D9-A26B-4940-942F-083D6674FB5B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
