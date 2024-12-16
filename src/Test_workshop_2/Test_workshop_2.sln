@@ -79,6 +79,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "035_Test_CountdownEvent", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "036_Test_InterlockedExample", "Test_InterlockedExample\036_Test_InterlockedExample.csproj", "{261249D9-A26B-4940-942F-083D6674FB5B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Easy_Pattern_State", "Easy_Pattern_State\Easy_Pattern_State.csproj", "{C44DD8AB-386B-4105-A202-ABEF5CD422A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -237,6 +239,10 @@ Global
 		{261249D9-A26B-4940-942F-083D6674FB5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{261249D9-A26B-4940-942F-083D6674FB5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{261249D9-A26B-4940-942F-083D6674FB5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C44DD8AB-386B-4105-A202-ABEF5CD422A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C44DD8AB-386B-4105-A202-ABEF5CD422A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C44DD8AB-386B-4105-A202-ABEF5CD422A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C44DD8AB-386B-4105-A202-ABEF5CD422A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
