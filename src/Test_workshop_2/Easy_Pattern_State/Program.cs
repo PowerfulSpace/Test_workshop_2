@@ -48,11 +48,3 @@ public class ConcreteStateA : IState
     }
 }
 
-public class ConcreteStateB : IState
-{
-    public void Handle(Context context)
-    {
-        Console.WriteLine("ConcreteStateB handles request.");
-        context.TransitionTo(new ConcreteStateA());
-    }
-}
