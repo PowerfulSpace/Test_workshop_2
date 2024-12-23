@@ -85,9 +85,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_sorting", "Test_sortin
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "038_SimpleNum", "SimpleNum\038_SimpleNum.csproj", "{85C27459-C58E-43FE-87C4-6CA4E5684B94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaxProduct", "MaxProduct\MaxProduct.csproj", "{DBF68CD3-0F40-425C-8B2B-6788708BFDC8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "039_MaxProduct", "MaxProduct\039_MaxProduct.csproj", "{DBF68CD3-0F40-425C-8B2B-6788708BFDC8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReverseString", "ReverseString\ReverseString.csproj", "{7C20539B-B10C-4616-B80C-EBCFD45E737B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "040_ReverseString", "ReverseString\040_ReverseString.csproj", "{7C20539B-B10C-4616-B80C-EBCFD45E737B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

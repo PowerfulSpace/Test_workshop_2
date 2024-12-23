@@ -1,62 +1,72 @@
 ﻿
 
-using System.Text;
+using System;
 
-string str = "hello";
+string[] lines =
+{
+    "A man, a plan, a canal, Panama",
+    "Was it a car or a cat I saw?",
+    "No lemon, no melon",
+    "Hello, world!",
+    "Madam, in Eden, I'm Adam",
+    "Racecar",
+    "Not a palindrome"
+};
 
 
-Console.WriteLine(GetReverseString1(str));
-Console.WriteLine(GetReverseString2(str));
-Console.WriteLine(GetReverseString3(str));
-Console.WriteLine(GetReverseString4(str));
+foreach (string line in lines)
+{
+    if (IsPalindrome(line))
+    {
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.WriteLine($"Строка \"{line}\" является палиндромом");
+        Console.ForegroundColor = ConsoleColor.Gray;
+    }
+    else
+    {
+        Console.ForegroundColor = ConsoleColor.Red;
+        Console.WriteLine($"\"{line}\" - Не палиндром");
+        Console.ForegroundColor = ConsoleColor.Gray;
+    }
+}
 
 
 Console.ReadLine();
 
 
-string GetReverseString1(string str)
+bool IsPalindrome(string str)
 {
-    Stack<char> chars = new Stack<char>();
-    StringBuilder sb = new StringBuilder();
+    if (string.IsNullOrEmpty(str)) { return true; }
 
-    foreach (char c in str)
+    HashSet<char> chars = new HashSet<char>{ ',', '.', '!', ':', ';', ' ', '\'', '?' };
+
+    str = str.ToLower();
+
+    for (int i = 0,j = str.Length - 1; i < j; i++, j--)
     {
-        chars.Push(c);
-    }
-    foreach (char c in chars)
-    {
-        sb.Append(c);
-    }
+        while (i < j && chars.Contains(str[i])) { i++; }
+        while (i < j && chars.Contains(str[j])) { j--; }
 
-    return sb.ToString();
-}
-
-string GetReverseString2(string str)
-{
-    var s = str.Reverse();
-    var result = string.Concat(s);
-
-    return result;
-}
-
-string GetReverseString3(string str)
-{
-    char[] chars = str.ToCharArray();
-    char temp;
-
-    for (int i = 0,j = str.Length - 1; i < str.Length / 2; i++,j--)
-    {
-        temp = str[i];
-        chars[i] = str[j];
-        chars[j] = temp;
+        if (str[i] != str[j]) { return false; }
     }
 
-    return new string(chars);
+    return true;
 }
 
-string GetReverseString4(string str)
+
+bool IsPalindrome2(string str)
 {
-    char[] chars = str.ToCharArray();
-    Array.Reverse(chars);
-    return new string(chars);
+    // Удаление пробелов, знаков препинания и перевод в нижний регистр
+    str = new string(str
+        .Where(char.IsLetterOrDigit) // Оставляем только буквы и цифры
+        .ToArray())
+        .ToLower();
+
+    // Проверка палиндрома двумя указателями
+    for (int i = 0, j = str.Length - 1; i < j; i++, j--)
+    {
+        if (str[i] != str[j]) return false;
+    }
+
+    return true;
 }
