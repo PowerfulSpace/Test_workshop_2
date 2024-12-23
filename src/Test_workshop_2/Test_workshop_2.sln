@@ -83,7 +83,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "037_Easy_Pattern_State", "E
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test_sorting", "Test_sorting\Test_sorting.csproj", "{7CBED6EA-B9E0-4F46-ACC6-E5CF528F4386}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleNum", "SimpleNum\SimpleNum.csproj", "{85C27459-C58E-43FE-87C4-6CA4E5684B94}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "038_SimpleNum", "SimpleNum\038_SimpleNum.csproj", "{85C27459-C58E-43FE-87C4-6CA4E5684B94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
