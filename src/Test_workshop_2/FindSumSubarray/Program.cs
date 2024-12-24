@@ -7,7 +7,11 @@ int result = 0;
 result = FindSumSubarray(array);
 Console.WriteLine(result);
 
-result = FindSumSubarray2(array, int.MinValue, 0);
+result = FindSumSubarray2(array);
+Console.WriteLine(result);
+
+
+result = FindSumSubarray3(array, int.MinValue, 0);
 Console.WriteLine(result);
 
 Console.ReadLine();
@@ -40,7 +44,7 @@ int FindSumSubarray(int[] array)
     return maxSum;
 }
 
-int FindSumSubarray2(int[] array, int maxSum, int index)
+int FindSumSubarray2(int[] array)
 {
 
     int maxSoFar = array[0];
