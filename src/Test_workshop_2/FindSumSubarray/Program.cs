@@ -40,9 +40,23 @@ int FindSumSubarray(int[] array)
     return maxSum;
 }
 
-
-
 int FindSumSubarray2(int[] array, int maxSum, int index)
+{
+
+    int maxSoFar = array[0];
+    int maxEndingHere = array[0];
+
+    for (int i = 1; i < array.Length; i++)
+    {
+        maxEndingHere = Math.Max(array[i], maxEndingHere + array[i]);
+        maxSoFar = Math.Max(maxSoFar, maxEndingHere);
+    }
+
+    return maxSoFar;
+}
+
+
+int FindSumSubarray3(int[] array, int maxSum, int index)
 {
     if (index > array.Length - 1)
     {
@@ -58,9 +72,8 @@ int FindSumSubarray2(int[] array, int maxSum, int index)
         if (sum > maxSum) { maxSum = sum; }
     }
 
-    maxSum = FindSumSubarray2(array, maxSum, index + 1);
+    maxSum = FindSumSubarray3(array, maxSum, index + 1);
 
     return maxSum;
 }
-
 
