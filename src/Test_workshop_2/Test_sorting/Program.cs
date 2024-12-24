@@ -1,7 +1,4 @@
 ﻿
-
-using System;
-
 string[] lines =
 {
     "A man, a plan, a canal, Panama",
