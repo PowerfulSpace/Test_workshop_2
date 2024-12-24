@@ -89,9 +89,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "039_MaxProduct", "MaxProduc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "040_ReverseString", "ReverseString\040_ReverseString.csproj", "{7C20539B-B10C-4616-B80C-EBCFD45E737B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindPalindrome", "FindPalindrome\FindPalindrome.csproj", "{5CED70D2-9043-4789-B3AB-9A259830F621}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "041_FindPalindrome", "FindPalindrome\041_FindPalindrome.csproj", "{5CED70D2-9043-4789-B3AB-9A259830F621}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindDuplicate", "FindDuplicate\FindDuplicate.csproj", "{F601FF35-9E28-4583-993B-2F3779DF9B95}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "042_FindDuplicate", "FindDuplicate\042_FindDuplicate.csproj", "{F601FF35-9E28-4583-993B-2F3779DF9B95}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
