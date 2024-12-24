@@ -1,8 +1,4 @@
 ﻿
 
 
-
-
-
 Console.ReadLine();
-
