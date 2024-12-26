@@ -2,22 +2,22 @@
 
 using System.Numerics;
 
-double num = 50;
+long num = 50;
 
-double result = FindNumFibonachi(num);
+long result = FindNumFibonachi(num);
 
 Console.WriteLine(result);
 
 Console.ReadLine();
 
-double FindNumFibonachi(double num)
+long FindNumFibonachi(long num)
 {
-    double first = 0;
-    double second = 1;
+    long first = 0;
+    long second = 1;
 
-    for (double i = 2; i <= num; i++)
+    for (long i = 2; i <= num; i++)
     {
-        double temp = second;
+        long temp = second;
         second = first + second;
         first = temp;
     }
