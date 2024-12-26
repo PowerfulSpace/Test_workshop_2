@@ -97,9 +97,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "043_FindSumSubarray", "Find
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "045_FindTheMissingDigit", "FindTheMissingDigit\045_FindTheMissingDigit.csproj", "{9869EE3C-16AB-4F13-89E9-891DFF51E626}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "QuickSort\QuickSort.csproj", "{934E3D58-732A-4EDA-ACCB-F74243CDED0E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "046_QuickSort", "QuickSort\046_QuickSort.csproj", "{934E3D58-732A-4EDA-ACCB-F74243CDED0E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindSumtwoNumber", "FindSumtwoNumber\FindSumtwoNumber.csproj", "{DCBCAC6C-9D37-4672-93B9-DFE86A296AC9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "047_FindSumtwoNumber", "FindSumtwoNumber\047_FindSumtwoNumber.csproj", "{DCBCAC6C-9D37-4672-93B9-DFE86A296AC9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
