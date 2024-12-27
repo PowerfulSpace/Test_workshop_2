@@ -1,70 +1,66 @@
 ﻿
 
 
-//-1 — это стартовая клетка (S).
-//2 — это целевая клетка (T).
-//0 — это проходимая клетка.
-//1 — это стена.
+int[,] maze = {
+            { 0, 1, 0, 0, 0 },
+            { 0, 1, 0, 1, 0 },
+            { 0, 0, 0, 1, 0 },
+            { 1, 1, 0, 1, 0 },
+            { 0, 0, 0, 0, 0 }
+        };
+
+var start = (row: 0, col: 0);
+var end = (row: 4, col: 4);
 
 
-//int[,] maze = new int[,]
-//{
-//    { -1, 0, 1, 0, 0 },
-//    {  1, 0, 1, 0, 1 },
-//    {  0, 0, 1, 0, 0 },
-//    {  1, 0, 0, 0, 2 },
-//    {  0, 1, 1, 0, 0 } 
-//};
+int result = FindShortestPath(maze, start, end);
 
-int[,] maze = new int[,]
-{
-    { -1, 1, 0, 1, 1 },
-    { 0, 1, 0, 1, 2 },
-    { 1, 1, 0, 1, 1 },
-    { 0, 1, 1, 1, 0 },
-    { 1, 0, 0, 1, 1 }
-};
-
-Console.WriteLine(GetTheShortestWay(maze));
-
-
+Console.WriteLine(result == -1 ? "Путь не найден" : $"Минимальное количество шагов: {result}");
 
 Console.ReadLine();
 
 
-int GetTheShortestWay(int[,] array)
+int FindShortestPath(int[,] maze, (int row, int col) start, (int row, int col) end)
 {
+    int rows = maze.GetLength(0);
+    int cols = maze.GetLength(1);
 
-    for (int i = 1; i < array.GetLength(0); i++)
-    {
-        if (array[0, i - 1] == 0)
-        {
-            array[0, i] = 0;
-        }
-    }
-    for (int i = 1; i < array.GetLength(1); i++)
-    {
-        if (array[i - 1, 0] == 0)
-        {
-            array[i,0] = 0;
-        }
-    }
+  //  вверх вниз влево вправо
+  //  |-1|  |1|  | 0|  |0|
+  //  | 0|  |0|  |-1|  |1|
+    int[] dr = { -1, 1, 0, 0 };
+    int[] dc = { 0, 0, -1, 1 };
 
-    for (int i = 1; i < array.GetLength(0); i++)
+    var queue = new Queue<(int row, int col, int distance)>();
+    queue.Enqueue((start.row, start.col, 0));
+
+    var visited = new bool[rows, cols];
+    visited[start.row, start.col] = true;
+
+    while (queue.Count > 0)
     {
-        for (int j = 1; j < array.GetLength(1); j++)
+        var (currentRow, currentCol, currentDistance) = queue.Dequeue();
+
+        if(currentRow == end.row && currentCol == end.col)
         {
-            if (array[i, j] == 0)
+            return currentDistance;
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            int newRow = currentRow + dr[i];
+            int newCol = currentCol + dc[i];
+
+            if(newRow >= 0 && newRow < rows 
+                && newCol >= 0 && newCol < cols 
+                && maze[newRow, newCol] == 0 && !visited[newRow, newCol])
             {
-                continue;
-            }
-
-            if (array[i - 1, j] == 0 || array[i, j - 1] == 0)
-            {
-                array[i, j] = array[i - 1, j] + array[i, j - 1];
+                queue.Enqueue((newRow, newCol, currentDistance + 1));
+                visited[newRow, newCol] = true;
             }
         }
     }
 
-    return 32;
+
+    return -1;
 }
