@@ -6,7 +6,7 @@ int[,] maze = {
             { 0, 1, 0, 1, 0 },
             { 0, 0, 0, 1, 0 },
             { 1, 1, 0, 1, 0 },
-            { 0, 0, 0, 0, 0 }
+            { 0, 0, 0, 0, 10 }
         };
 
 var start = (row: 0, col: 0);
@@ -59,8 +59,11 @@ int FindShortestPath(int[,] maze, (int row, int col) start, (int row, int col) e
                 visited[newRow, newCol] = true;
             }
         }
-    }
 
+       
+    }
 
     return -1;
 }
+
+
