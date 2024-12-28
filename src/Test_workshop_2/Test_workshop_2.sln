@@ -105,7 +105,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "048_FindFibonacci", "FindFi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "049_Maze_BFS", "Maze_BFS\049_Maze_BFS.csproj", "{32728A40-AA5B-4DDB-B868-F503B0C4E5B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Maze_DFS", "Maze_DFS\Maze_DFS.csproj", "{FF871BD9-4299-4959-89C6-710E5FF87DDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "050_Maze_DFS", "Maze_DFS\050_Maze_DFS.csproj", "{FF871BD9-4299-4959-89C6-710E5FF87DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
