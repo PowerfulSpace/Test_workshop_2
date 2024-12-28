@@ -65,5 +65,3 @@ int FindShortestPath(int[,] maze, (int row, int col) start, (int row, int col) e
 
     return -1;
 }
-
-
