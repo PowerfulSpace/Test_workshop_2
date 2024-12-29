@@ -1,5 +1,5 @@
 ﻿
-string input = "abbc";
+string input = "abc";
 HashSet<string> permutations = new HashSet<string>();
 
 GeneratePermutations(input.ToCharArray(), 0, input.Length - 1, permutations);
