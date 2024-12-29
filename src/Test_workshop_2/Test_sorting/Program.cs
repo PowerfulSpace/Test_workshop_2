@@ -7,18 +7,18 @@ int[,] maze = {
             { 0, 0, 0, 0, 0 }
         };
 
-var start = (y: 0, x: 0);
-var end = (y: 4, x: 4);
+var start = (row: 0, col: 0);
+var end = (row: 4, col: 4);
 
 Console.WriteLine(GetMinPath(maze, start, end));
 
 Console.ReadLine();
 
 
-int GetMinPath(int[,] maze,(int y,int x) start, (int y, int x) end)
+int GetMinPath(int[,] maze,(int row, int col) start, (int row, int col) end)
 {
     Queue<(int row, int col, int distance)> queue = new Queue<(int, int, int)>();
-    queue.Enqueue(new(start.y, start.x, 0));
+    queue.Enqueue(new(start.row, start.col, 0));
 
     bool[,] vizited = new bool[maze.GetLength(0), maze.GetLength(1)];
     vizited[0, 0] = true;
@@ -30,7 +30,7 @@ int GetMinPath(int[,] maze,(int y,int x) start, (int y, int x) end)
     {
         (int row, int col, int distance) temp = queue.Dequeue();
 
-        if(temp.row == end.y && temp.col == end.x)
+        if(temp.row == end.row && temp.col == end.col)
         {
             return temp.distance;
         }
@@ -40,18 +40,19 @@ int GetMinPath(int[,] maze,(int y,int x) start, (int y, int x) end)
             int newRow = temp.row + dr[i];
             int newCol = temp.col + dc[i];
 
-            if (newRow != 1 && newCol != 1
-                && newRow >= 0 && newRow < end.y
-                && newCol >= 0 && newCol < end.x
-                && !vizited[newRow, newCol])
+            if (newRow >= 0 && newRow <= end.row
+                && newCol >= 0 && newCol <= end.col
+                && maze[newRow, newCol] != 1 && !vizited[newRow, newCol])
             {
                 queue.Enqueue(new (newRow, newCol,temp.distance + 1));
-                vizited[temp.row, temp.col] = true;
+                vizited[newRow, newCol] = true;
             }
         }
+
+        
     }
 
-    throw new Exception("Не одного пути не было найдено");
+    return -1;
 }
 
 
