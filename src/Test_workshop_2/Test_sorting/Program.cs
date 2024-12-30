@@ -11,8 +11,6 @@ foreach (string permutation in permutations)
 }
 Console.ReadLine();
 
-
-
 void GeneratePermutations(char[] chars, int left, int right, HashSet<string> result)
 {
     if (left == right)
