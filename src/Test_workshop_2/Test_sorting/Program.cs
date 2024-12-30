@@ -1,8 +1,8 @@
 ﻿
-string input = "abc";
+string input = "abbc";
 HashSet<string> permutations = new HashSet<string>();
 
-GeneratePermutations(input.ToCharArray(), 0, input.Length - 1, permutations);
+GeneratePermutations(input.ToCharArray(), 0, permutations);
 
 Console.WriteLine("Уникальные перестановки строки:");
 foreach (string permutation in permutations)
@@ -11,31 +11,34 @@ foreach (string permutation in permutations)
 }
 Console.ReadLine();
 
-void GeneratePermutations(char[] chars, int left, int right, HashSet<string> result)
+
+
+
+void GeneratePermutations(char[] chars, int index, HashSet<string> result)
 {
-    if (left == right)
+    if (index == chars.Length - 1)
     {
         result.Add(new string(chars));
         return;
     }
 
-    HashSet<char> used = new HashSet<char>(); // Сбрасывается на каждом уровне
+    HashSet<char> used = new HashSet<char>();
 
-    for (int i = left; i <= right; i++)
+    for (int i = index; i < chars.Length; i++)
     {
-        if (!used.Contains(chars[i])) // Проверяем, был ли символ уже использован
+        if (!used.Contains(chars[i]))
         {
             used.Add(chars[i]);
-            Swap(chars, left, i);
-            GeneratePermutations(chars, left + 1, right, result);
-            Swap(chars, left, i); // Возвращаем к исходному состоянию
+            Swap(chars, index, i);
+            GeneratePermutations(chars, index + 1, result);
+            Swap(chars, index, i);
         }
     }
 }
 
 void Swap(char[] chars, int i, int j)
 {
-    if (i != j) // Убираем бессмысленный свап
+    if (i != j)
     {
         char temp = chars[i];
         chars[i] = chars[j];
