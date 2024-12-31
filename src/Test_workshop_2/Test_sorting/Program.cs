@@ -12,8 +12,6 @@ foreach (string permutation in permutations)
 Console.ReadLine();
 
 
-
-
 void GeneratePermutations(char[] chars, int index, HashSet<string> result)
 {
     if (index == chars.Length - 1)
