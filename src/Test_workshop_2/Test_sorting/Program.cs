@@ -1,47 +1,15 @@
 ﻿
-string input = "abbc";
-HashSet<string> permutations = new HashSet<string>();
+string expression = "3 4 + 5 *"; // Пример выражения в RPN
+double result = EvaluateRPN(expression);
+Console.WriteLine($"Результат: {result}");
 
-GeneratePermutations(input.ToCharArray(), 0, permutations);
 
-Console.WriteLine("Уникальные перестановки строки:");
-foreach (string permutation in permutations)
-{
-    Console.WriteLine(permutation);
-}
+
 Console.ReadLine();
 
 
 
-
-void GeneratePermutations(char[] chars, int index, HashSet<string> result)
+double EvaluateRPN(string expression)
 {
-    if (index == chars.Length - 1)
-    {
-        result.Add(new string(chars));
-        return;
-    }
-
-    HashSet<char> used = new HashSet<char>();
-
-    for (int i = index; i < chars.Length; i++)
-    {
-        if (!used.Contains(chars[i]))
-        {
-            used.Add(chars[i]);
-            Swap(chars, index, i);
-            GeneratePermutations(chars, index + 1, result);
-            Swap(chars, index, i);
-        }
-    }
-}
-
-void Swap(char[] chars, int i, int j)
-{
-    if (i != j)
-    {
-        char temp = chars[i];
-        chars[i] = chars[j];
-        chars[j] = temp;
-    }
+    // Реализация вычисления RPN
 }
