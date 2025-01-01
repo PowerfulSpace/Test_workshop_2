@@ -20,7 +20,7 @@ double EvaluateRPN(string expression)
         {
             continue;
         }
-        if(expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/')
+        if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/')
         {
             @operator.Enqueue(expression[i]);
         }
@@ -32,7 +32,7 @@ double EvaluateRPN(string expression)
 
     int result = operand.Dequeue();
 
-    while(operand.Count > 0)
+    while (operand.Count > 0)
     {
         switch (@operator.Dequeue())
         {

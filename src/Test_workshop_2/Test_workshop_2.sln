@@ -109,6 +109,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "050_Maze_DFS", "Maze_DFS\05
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "051_Permutation", "Permutation\051_Permutation.csproj", "{B1900A60-7AD0-4ECB-B9CE-00ED7BB3F85F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaluateRPN", "EvaluateRPN\EvaluateRPN.csproj", "{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -327,6 +329,10 @@ Global
 		{B1900A60-7AD0-4ECB-B9CE-00ED7BB3F85F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1900A60-7AD0-4ECB-B9CE-00ED7BB3F85F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1900A60-7AD0-4ECB-B9CE-00ED7BB3F85F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
