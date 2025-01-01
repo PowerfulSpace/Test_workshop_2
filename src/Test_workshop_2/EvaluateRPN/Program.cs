@@ -11,46 +11,40 @@ Console.ReadLine();
 
 double EvaluateRPN(string expression)
 {
-    Queue<char> @operator = new Queue<char>();
-    Queue<int> operand = new Queue<int>();
+    Stack<double> stack = new Stack<double>();
+    string[] tokens = expression.Split(' '); // Разделяем выражение на токены
 
-    for (int i = 0; i < expression.Length; i++)
+    foreach (string token in tokens)
     {
-        if (expression[i] == ' ')
+        if (double.TryParse(token, out double number))
         {
-            continue;
-        }
-        if (expression[i] == '+' || expression[i] == '-' || expression[i] == '*' || expression[i] == '/')
-        {
-            @operator.Enqueue(expression[i]);
+            stack.Push(number); // Если это число, добавляем его в стек
         }
         else
         {
-            operand.Enqueue(int.Parse((expression[i].ToString())));
+            // Если это оператор, извлекаем два операнда и выполняем операцию
+            double b = stack.Pop();
+            double a = stack.Pop();
+
+            switch (token)
+            {
+                case "+":
+                    stack.Push(a + b);
+                    break;
+                case "-":
+                    stack.Push(a - b);
+                    break;
+                case "*":
+                    stack.Push(a * b);
+                    break;
+                case "/":
+                    stack.Push(a / b);
+                    break;
+                default:
+                    throw new InvalidOperationException($"Неизвестный оператор: {token}");
+            }
         }
     }
 
-    int result = operand.Dequeue();
-
-    while (operand.Count > 0)
-    {
-        switch (@operator.Dequeue())
-        {
-            case '+':
-                result += operand.Dequeue();
-                break;
-            case '-':
-                result -= operand.Dequeue();
-                break;
-            case '*':
-                result *= operand.Dequeue();
-                break;
-            default:
-                result /= operand.Dequeue();
-                break;
-        }
-    }
-
-
-    return result;
+    return stack.Pop(); // Последний элемент в стеке — это результат
 }
