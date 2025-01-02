@@ -3,33 +3,32 @@ int maxWeight = 15; // Максимальный вес рюкзака
 int[] weights = { 1, 3, 4, 5, 6, 7 }; // Веса предметов
 int[] values = { 1, 4, 5, 7, 10, 13 }; // Стоимости предметов
 
-Console.WriteLine(FindMaximumValueOfItems(0, weights, values, 0, maxWeight, 0, 0));
+Console.WriteLine(FindMaximumValue(0, weights, values, 0));
 
 Console.ReadLine();
 
 
-int FindMaximumValueOfItems(int index, int[] weights, int[] values, int currentWeight, int maxWeight, int currentPrice, int maxPrice)
+
+int FindMaximumValue(int index, int[] weights, int[] values, int remainingWeight)
 {
-    if(currentWeight > maxWeight)
+    // Базовый случай: если индекс выходит за пределы списка
+    if (index == weights.Length)
     {
-        return maxPrice;
-    }
-    if(currentPrice > maxPrice)
-    {
-        maxPrice = currentPrice;
+        return 0;
     }
 
-    for (int i = index; i < weights.Length; i++)
+    // Если текущий предмет не вмещается, пропускаем его
+    if (weights[index] > remainingWeight)
     {
-        currentPrice += values[i];
-        currentWeight += weights[i];
-
-        maxPrice = FindMaximumValueOfItems(i + 1, weights, values, currentWeight, maxWeight, currentPrice, maxPrice);
-
-        currentPrice -= values[i];
-        currentWeight -= weights[i];
+        return FindMaximumValue(index + 1, weights, values, remainingWeight);
     }
 
+    // Вариант 1: пропустить текущий предмет
+    int skip = FindMaximumValue(index + 1, weights, values, remainingWeight);
 
-    return maxPrice;
+    // Вариант 2: взять текущий предмет
+    int take = values[index] + FindMaximumValue(index + 1, weights, values, remainingWeight - weights[index]);
+
+    // Возвращаем максимум из двух вариантов
+    return Math.Max(skip, take);
 }
