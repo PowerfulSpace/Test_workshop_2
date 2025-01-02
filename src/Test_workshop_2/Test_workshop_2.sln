@@ -111,6 +111,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "051_Permutation", "Permutat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvaluateRPN", "EvaluateRPN\EvaluateRPN.csproj", "{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backpack", "Backpack\Backpack.csproj", "{CE6782EA-6D8F-4211-8FC4-E72B218A38AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -333,6 +335,10 @@ Global
 		{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C4CF52E-74EC-457B-82EB-5F8923FBBBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE6782EA-6D8F-4211-8FC4-E72B218A38AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE6782EA-6D8F-4211-8FC4-E72B218A38AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE6782EA-6D8F-4211-8FC4-E72B218A38AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE6782EA-6D8F-4211-8FC4-E72B218A38AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

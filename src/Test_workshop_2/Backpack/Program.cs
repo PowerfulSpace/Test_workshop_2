@@ -10,11 +10,11 @@ Console.ReadLine();
 
 int FindMaximumValueOfItems(int index, int[] weights, int[] values, int currentWeight, int maxWeight, int currentPrice, int maxPrice)
 {
-    if(currentWeight > maxWeight)
+    if (currentWeight > maxWeight)
     {
         return maxPrice;
     }
-    if(currentPrice > maxPrice)
+    if (currentPrice > maxPrice)
     {
         maxPrice = currentPrice;
     }
