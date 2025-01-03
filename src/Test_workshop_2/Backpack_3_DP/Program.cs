@@ -1,7 +1,11 @@
 ﻿
-int maxWeight = 15; // Максимальный вес рюкзака
-int[] weights = { 1, 3, 4, 5, 6, 7 }; // Веса предметов
-int[] values = { 1, 4, 5, 7, 10, 13 }; // Стоимости предметов
+//int maxWeight = 15; // Максимальный вес рюкзака
+//int[] weights = { 1, 3, 4, 5, 6, 7 }; // Веса предметов
+//int[] values = { 1, 4, 5, 7, 10, 13 }; // Стоимости предметов
+
+int maxWeight = 7; // Максимальный вес рюкзака
+int[] weights = { 2, 3, 4 }; // Веса предметов
+int[] values = { 3, 4, 5 }; // Стоимости предметов
 
 Console.WriteLine(FindMaximumValueDP(weights, values, maxWeight));
 
