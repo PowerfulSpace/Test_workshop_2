@@ -113,9 +113,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "052_EvaluateRPN", "Evaluate
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "053_Backpack", "Backpack\053_Backpack.csproj", "{CE6782EA-6D8F-4211-8FC4-E72B218A38AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backpack_2", "Backpack_2\Backpack_2.csproj", "{B7192FC6-044C-49DB-ACC1-2159961696E9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "054_Backpack_2", "Backpack_2\054_Backpack_2.csproj", "{B7192FC6-044C-49DB-ACC1-2159961696E9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Backpack_3_DP", "Backpack_3_DP\Backpack_3_DP.csproj", "{C46C077C-2797-439A-A601-44313E127FF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "055_Backpack_3_DP", "Backpack_3_DP\055_Backpack_3_DP.csproj", "{C46C077C-2797-439A-A601-44313E127FF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
