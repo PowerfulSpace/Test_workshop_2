@@ -21,10 +21,16 @@ int FindMaximumValueDP(int[] weights, int[] values, int maxWeight)
     // Заполняем таблицу dp
     for (int i = 1; i <= n; i++)
     {
+        Console.WriteLine();
         for (int w = 1; w <= maxWeight; w++)
         {
             if (weights[i - 1] <= w) // Если текущий предмет помещается в рюкзак
             {
+                int notTake = dp[i - 1, w];
+                int price = values[i - 1];
+                int excessWeight = w - weights[i - 1];
+                int excessPrice = dp[i - 1, excessWeight];
+
                 dp[i, w] = Math.Max(
                     dp[i - 1, w], // Не брать текущий предмет
                     values[i - 1] + dp[i - 1, w - weights[i - 1]] // Взять текущий предмет
