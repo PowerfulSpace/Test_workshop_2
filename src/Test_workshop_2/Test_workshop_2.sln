@@ -119,7 +119,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "055_Backpack_3_DP", "Backpa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "056_FindProgression", "FindProgression\056_FindProgression.csproj", "{B240396E-ACA3-4C89-9711-8FD431A8FD06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindMostFrequentNumber", "FindMostFrequentNumber\FindMostFrequentNumber.csproj", "{3AA8F4FE-0060-4B96-811B-2FE0C549B8A4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "057_FindMostFrequentNumber", "FindMostFrequentNumber\057_FindMostFrequentNumber.csproj", "{3AA8F4FE-0060-4B96-811B-2FE0C549B8A4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
