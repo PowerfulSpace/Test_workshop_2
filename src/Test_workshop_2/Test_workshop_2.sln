@@ -117,6 +117,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "054_Backpack_2", "Backpack_
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "055_Backpack_3_DP", "Backpack_3_DP\055_Backpack_3_DP.csproj", "{C46C077C-2797-439A-A601-44313E127FF2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindProgression", "FindProgression\FindProgression.csproj", "{B240396E-ACA3-4C89-9711-8FD431A8FD06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -351,6 +353,10 @@ Global
 		{C46C077C-2797-439A-A601-44313E127FF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C46C077C-2797-439A-A601-44313E127FF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C46C077C-2797-439A-A601-44313E127FF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B240396E-ACA3-4C89-9711-8FD431A8FD06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B240396E-ACA3-4C89-9711-8FD431A8FD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B240396E-ACA3-4C89-9711-8FD431A8FD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B240396E-ACA3-4C89-9711-8FD431A8FD06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
