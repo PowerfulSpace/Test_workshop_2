@@ -18,8 +18,6 @@ Console.WriteLine(result);
 
 Console.ReadLine();
 
-
-
 int FindShortestPath(Dictionary<string, List<(string, int)>> graph, string start, string end)
 {
     // Расстояния от стартовой вершины до всех остальных
