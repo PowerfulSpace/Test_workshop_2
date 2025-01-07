@@ -1,18 +1,12 @@
 ﻿
 // Создаём граф
 Graph graph = new Graph();
-graph.AddEdge("A", "B", 3);
-graph.AddEdge("A", "C", 7);
-graph.AddEdge("A", "D", 5);
-graph.AddEdge("B", "E", 6);
-graph.AddEdge("C", "E", 4);
-graph.AddEdge("C", "F", 2);
-graph.AddEdge("D", "F", 8);
-graph.AddEdge("E", "G", 1);
-graph.AddEdge("F", "G", 3);
-graph.AddEdge("F", "H", 9);
-graph.AddEdge("G", "H", 2);
-graph.AddEdge("D", "H", 10);
+graph.AddEdge("A", "B", 1);
+graph.AddEdge("A", "C", 4);
+graph.AddEdge("B", "C", 2);
+graph.AddEdge("B", "D", 6);
+graph.AddEdge("C", "D", 3);
+
 
 // Выводим граф
 graph.PrintGraph();
@@ -31,49 +25,42 @@ int FindShortestPath(Dictionary<string, List<(string, int)>> graph, string start
 {
     // Расстояния от стартовой вершины до всех остальных
     Dictionary<string, int> distances = new Dictionary<string, int>();
-    // Множество посещённых вершин
-    HashSet<string> visited = new HashSet<string>();
+    // Очередь с приоритетом для вершин
+    PriorityQueue<string, int> priorityQueue = new PriorityQueue<string, int>();
     // Инициализация
     foreach (var vertex in graph.Keys)
-        distances[vertex] = int.MaxValue;
-
-    distances[start] = 0; // Расстояние до самого себя = 0
-
-    while (visited.Count < graph.Count)
     {
-        // Выбираем непосещённую вершину с минимальным расстоянием
-        string current = null;
-        int currentDistance = int.MaxValue;
+        distances[vertex] = int.MaxValue;
+    }
+    distances[start] = 0;
 
-        foreach (var vertex in distances.Keys)
-        {
-            if (!visited.Contains(vertex) && distances[vertex] < currentDistance)
-            {
-                current = vertex;
-                currentDistance = distances[vertex];
-            }
-        }
+    // Добавляем стартовую вершину в очередь с приоритетом
+    priorityQueue.Enqueue(start, 0);
 
-        if (current == null) // Нет достижимых вершин
+    while (priorityQueue.Count > 0)
+    {
+        // Извлекаем вершину с минимальным расстоянием
+        string current = priorityQueue.Dequeue();
+
+        // Если текущая вершина - целевая, выходим из цикла
+        if (current == end)
             break;
-
-        // Помечаем текущую вершину как посещённую
-        visited.Add(current);
 
         // Обновляем расстояния до соседей
         foreach (var neighbor in graph[current])
         {
-            if (!visited.Contains(neighbor.Item1))
+            int newDistance = distances[current] + neighbor.Item2;
+
+            if (newDistance < distances[neighbor.Item1])
             {
-                int newDistance = distances[current] + neighbor.Item2;
-                if (newDistance < distances[neighbor.Item1])
-                    distances[neighbor.Item1] = newDistance;
+                distances[neighbor.Item1] = newDistance;
+                priorityQueue.Enqueue(neighbor.Item1, newDistance);
             }
         }
     }
 
     // Возвращаем кратчайшее расстояние до целевой вершины
-    return distances.ContainsKey(start) ? distances[end] : -1;
+    return distances.ContainsKey(end) ? distances[end] : -1;
 }
 
 
