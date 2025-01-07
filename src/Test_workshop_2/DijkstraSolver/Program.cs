@@ -1,18 +1,11 @@
 ﻿
 // Создаём граф
 Graph graph = new Graph();
-graph.AddEdge("A", "B", 3);
-graph.AddEdge("A", "C", 7);
-graph.AddEdge("A", "D", 5);
-graph.AddEdge("B", "E", 6);
-graph.AddEdge("C", "E", 4);
-graph.AddEdge("C", "F", 2);
-graph.AddEdge("D", "F", 8);
-graph.AddEdge("E", "G", 1);
-graph.AddEdge("F", "G", 3);
-graph.AddEdge("F", "H", 9);
-graph.AddEdge("G", "H", 2);
-graph.AddEdge("D", "H", 10);
+graph.AddEdge("A", "B", 1);
+graph.AddEdge("A", "C", 4);
+graph.AddEdge("B", "C", 2);
+graph.AddEdge("B", "D", 6);
+graph.AddEdge("C", "D", 3);
 
 // Выводим граф
 graph.PrintGraph();
