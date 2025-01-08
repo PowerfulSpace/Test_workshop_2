@@ -23,7 +23,44 @@ Console.ReadLine();
 
 int FindShortestPath(Dictionary<string, List<(string, int)>> graph, string start, string end)
 {
-   
+    // Расстояния от стартовой вершины до всех остальных
+    Dictionary<string, int> distances = new Dictionary<string, int>();
+    // Очередь с приоритетом для вершин
+    PriorityQueue<string, int> priorityQueue = new PriorityQueue<string, int>();
+    // Инициализация
+    foreach (var vertex in graph.Keys)
+    {
+        distances[vertex] = int.MaxValue;
+    }
+    distances[start] = 0;
+
+    // Добавляем стартовую вершину в очередь с приоритетом
+    priorityQueue.Enqueue(start, 0);
+
+    while (priorityQueue.Count > 0)
+    {
+        // Извлекаем вершину с минимальным расстоянием
+        string current = priorityQueue.Dequeue();
+
+        // Если текущая вершина - целевая, выходим из цикла
+        if (current == end)
+            break;
+
+        // Обновляем расстояния до соседей
+        foreach (var neighbor in graph[current])
+        {
+            int newDistance = distances[current] + neighbor.Item2;
+
+            if (newDistance < distances[neighbor.Item1])
+            {
+                distances[neighbor.Item1] = newDistance;
+                priorityQueue.Enqueue(neighbor.Item1, newDistance);
+            }
+        }
+    }
+
+    // Возвращаем кратчайшее расстояние до целевой вершины
+    return distances.ContainsKey(end) ? distances[end] : -1;
 }
 
 
