@@ -2,13 +2,13 @@
 // Создаём граф
 Graph graph = new Graph();
 graph.AddEdge("A", "B", 1);
-graph.AddEdge("A", "C", 4);
+graph.AddEdge("A", "C", 1);
 graph.AddEdge("B", "C", 2);
 graph.AddEdge("B", "D", 6);
 graph.AddEdge("C", "D", 3);
 
 
-
+// Выводим граф
 graph.PrintGraph();
 
 // Передайте граф в метод вашего алгоритма
