@@ -23,7 +23,43 @@ Console.ReadLine();
 
 int FindShortestPath(Dictionary<string, List<(string, int)>> graph, string start, string end)
 {
-   
+    Dictionary<string, int> destantions = new Dictionary<string, int>();
+    HashSet<string> viditing = new HashSet<string>();
+
+    foreach (var item in graph)
+    {
+        destantions.Add(item.Key, int.MaxValue);
+    }
+
+    destantions[start] = 0;
+
+
+    while(viditing.Count < destantions.Count)
+    {
+        string current = null;
+        int currentDestantion = int.MaxValue;
+
+        foreach (var item in destantions)
+        {
+            if (!viditing.Contains(item.Key) && item.Value <= currentDestantion)
+            {
+                current = item.Key;
+                currentDestantion = graph[current][0].Item2;
+            }
+        }
+
+
+        if(current == null) { break; }
+
+        viditing.Add(current);
+
+        Console.WriteLine();
+
+
+    }
+
+
+    return graph["A"][0].Item2;
 }
 
 
