@@ -69,7 +69,6 @@ class Graph
         adjacencyList = new Dictionary<string, List<(string, int)>>();
     }
 
-    // Добавить вершину
     public void AddVertex(string vertex)
     {
         if (!adjacencyList.ContainsKey(vertex))
@@ -78,7 +77,6 @@ class Graph
         }
     }
 
-    // Добавить ребро
     public void AddEdge(string from, string to, int weight)
     {
         if (!adjacencyList.ContainsKey(from))
@@ -91,16 +89,14 @@ class Graph
         }
 
         adjacencyList[from].Add((to, weight));
-        adjacencyList[to].Add((from, weight)); // Для неориентированного графа
+        adjacencyList[to].Add((from, weight));
     }
 
-    // Получить список смежности
     public Dictionary<string, List<(string, int)>> GetAdjacencyList()
     {
         return adjacencyList;
     }
 
-    // Вывести граф
     public void PrintGraph()
     {
         foreach (var vertex in adjacencyList)
