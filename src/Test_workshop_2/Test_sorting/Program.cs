@@ -23,43 +23,39 @@ Console.ReadLine();
 
 int FindShortestPath(Dictionary<string, List<(string, int)>> graph, string start, string end)
 {
-    Dictionary<string, int> destantions = new Dictionary<string, int>();
-    HashSet<string> viditing = new HashSet<string>();
 
-    foreach (var item in graph)
+    Dictionary<string, int> distances = new Dictionary<string, int>();
+    PriorityQueue<string, int> priorityQueue = new PriorityQueue<string, int>();
+
+    foreach (var vertex in graph.Keys)
     {
-        destantions.Add(item.Key, int.MaxValue);
+        distances[vertex] = int.MaxValue;
     }
+    distances[start] = 0;
 
-    destantions[start] = 0;
 
+    priorityQueue.Enqueue(start, 0);
 
-    while(viditing.Count < destantions.Count)
+    while (priorityQueue.Count > 0)
     {
-        string current = null;
-        int currentDestantion = int.MaxValue;
+        string current = priorityQueue.Dequeue();
 
-        foreach (var item in destantions)
+        if (current == end)
+            break;
+
+        foreach (var neighbor in graph[current])
         {
-            if (!viditing.Contains(item.Key) && item.Value <= currentDestantion)
+            int newDistance = distances[current] + neighbor.Item2;
+
+            if (newDistance < distances[neighbor.Item1])
             {
-                current = item.Key;
-                currentDestantion = graph[current][0].Item2;
+                distances[neighbor.Item1] = newDistance;
+                priorityQueue.Enqueue(neighbor.Item1, newDistance);
             }
         }
-
-
-        if(current == null) { break; }
-
-        viditing.Add(current);
-
-        Console.WriteLine();
-
-
     }
 
-
-    return graph["A"][0].Item2;
+    return distances.ContainsKey(end) ? distances[end] : -1;
 }
 
 
