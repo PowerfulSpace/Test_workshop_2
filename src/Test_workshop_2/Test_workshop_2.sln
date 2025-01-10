@@ -125,6 +125,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "058_DijkstraSolver", "Dijks
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "059_DijkstraSolver_OptimIzed", "DijkstraSolver_OptimIzed\059_DijkstraSolver_OptimIzed.csproj", "{20B63CF2-49C5-4FFA-A83A-BAB6BEDE438F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetShortestPath", "GetShortestPath\GetShortestPath.csproj", "{D1135DCF-697D-4252-B0A9-0F81FC7CB80B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -375,6 +377,10 @@ Global
 		{20B63CF2-49C5-4FFA-A83A-BAB6BEDE438F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20B63CF2-49C5-4FFA-A83A-BAB6BEDE438F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20B63CF2-49C5-4FFA-A83A-BAB6BEDE438F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1135DCF-697D-4252-B0A9-0F81FC7CB80B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1135DCF-697D-4252-B0A9-0F81FC7CB80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1135DCF-697D-4252-B0A9-0F81FC7CB80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1135DCF-697D-4252-B0A9-0F81FC7CB80B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
