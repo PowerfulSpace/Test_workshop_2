@@ -1,5 +1,7 @@
 ﻿
 // Создаём граф
+using System.Collections.Immutable;
+
 Graph graph = new Graph();
 graph.AddEdge("A", "B", 1);
 graph.AddEdge("A", "C", 4);
@@ -27,35 +29,32 @@ int FindShortestPath(Dictionary<string, List<(string, int)>> graph, string start
     Dictionary<string, int> distances = new Dictionary<string, int>();
     PriorityQueue<string, int> priorityQueue = new PriorityQueue<string, int>();
 
-    foreach (var vertex in graph.Keys)
+    foreach (var item in graph)
     {
-        distances[vertex] = int.MaxValue;
+        distances[item.Key] = int.MaxValue;
     }
+
     distances[start] = 0;
-
-
     priorityQueue.Enqueue(start, 0);
 
     while (priorityQueue.Count > 0)
     {
         string current = priorityQueue.Dequeue();
 
-        if (current == end)
-            break;
-
-        foreach (var neighbor in graph[current])
+        foreach (var item in graph[current])
         {
-            int newDistance = distances[current] + neighbor.Item2;
+            int distance = distances[current] + item.Item2;
 
-            if (newDistance < distances[neighbor.Item1])
+            if (distances[item.Item1] > distance)
             {
-                distances[neighbor.Item1] = newDistance;
-                priorityQueue.Enqueue(neighbor.Item1, newDistance);
+                distances[item.Item1] = distance;
+                priorityQueue.Enqueue(item.Item1,0);
             }
+
         }
     }
 
-    return distances.ContainsKey(end) ? distances[end] : -1;
+    return distances[end];
 }
 
 

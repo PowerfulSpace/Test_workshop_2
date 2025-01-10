@@ -123,7 +123,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "057_FindMostFrequentNumber"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "058_DijkstraSolver", "DijkstraSolver\058_DijkstraSolver.csproj", "{117869E5-E4A7-4EF7-AF67-A23EBB15540E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DijkstraSolver_OptimIzed", "DijkstraSolver_OptimIzed\DijkstraSolver_OptimIzed.csproj", "{20B63CF2-49C5-4FFA-A83A-BAB6BEDE438F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "059_DijkstraSolver_OptimIzed", "DijkstraSolver_OptimIzed\059_DijkstraSolver_OptimIzed.csproj", "{20B63CF2-49C5-4FFA-A83A-BAB6BEDE438F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
