@@ -42,7 +42,7 @@ string GetShortestPath(int[,] space)
     PrintArray(space);
     Console.WriteLine();
 
-    return PrintPath(space);
+    return PrintPath(ReversePath(space));
 }
 
 void PrintArray(int[,] space)
@@ -58,18 +58,34 @@ void PrintArray(int[,] space)
     Console.WriteLine();
 }
 
-string PrintPath(int[,] space)
+string PrintPath(Stack<(int row, int col)> stack)
 {
     StringBuilder sb = new StringBuilder();
+
+
+    while (stack.Count > 1)
+    {
+        var item = stack.Pop();
+        sb.Append($"({item.row}, {item.col}) -> ");
+    }
+
+    var endItem = stack.Pop();
+    sb.Append($"({endItem.row}, {endItem.col})");
+
+    return sb.ToString();
+}
+
+
+Stack<(int row, int col)> ReversePath(int[,] space)
+{
+    Stack<(int row,int col)> stack = new Stack<(int row,int col)> ();
 
     int row = space.GetLength(0) - 1;
     int col = space.GetLength(1) - 1;
 
-    sb.Append($"({row}, {col}) -> ");
-
     while (row != 0 && col != 0)
     {
-        if (space[row - 1,col] >= space[row, col - 1])
+        if (space[row - 1, col] >= space[row, col - 1])
         {
             col--;
         }
@@ -77,10 +93,8 @@ string PrintPath(int[,] space)
         {
             row--;
         }
-        sb.Append($"({row}, {col}) -> ");
+        stack.Push((row,col));
     }
 
-    sb.Append($"({0}, {0})");
-
-    return sb.ToString();
+    return stack;
 }
