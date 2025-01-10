@@ -1,5 +1,7 @@
 ﻿
 
+using System.Text;
+
 int[,] space = new int[5, 5]
 {
     { 1, 7, 7, 4, 3 },
@@ -9,14 +11,14 @@ int[,] space = new int[5, 5]
     { 6, 2, 3, 5, 1 }
 };
 
-GetShortestPath(space);
+string result = GetShortestPath(space);
+Console.WriteLine(result);
 
 Console.ReadLine();
 
 
-int GetShortestPath(int[,] space)
+string GetShortestPath(int[,] space)
 {
-    PrintArray(space);
 
     for (int i = 1; i < space.GetLength(0); i++)
     {
@@ -26,7 +28,6 @@ int GetShortestPath(int[,] space)
     {
         space[0, i] = space[0, i] + space[0, i - 1];
     }
-    PrintArray(space);
 
     for (int i = 1; i < space.GetLength(0); i++)
     {
@@ -41,7 +42,7 @@ int GetShortestPath(int[,] space)
     PrintArray(space);
     Console.WriteLine();
 
-    return space[space.GetLength(0) - 1, space.GetLength(1) - 1];
+    return PrintPath(space);
 }
 
 void PrintArray(int[,] space)
@@ -55,4 +56,31 @@ void PrintArray(int[,] space)
         Console.WriteLine();
     }
     Console.WriteLine();
+}
+
+string PrintPath(int[,] space)
+{
+    StringBuilder sb = new StringBuilder();
+
+    int row = space.GetLength(0) - 1;
+    int col = space.GetLength(1) - 1;
+
+    sb.Append($"({row}, {col}) -> ");
+
+    while (row != 0 && col != 0)
+    {
+        if (space[row - 1,col] >= space[row, col - 1])
+        {
+            col--;
+        }
+        else
+        {
+            row--;
+        }
+        sb.Append($"({row}, {col}) -> ");
+    }
+
+    sb.Append($"({0}, {0})");
+
+    return sb.ToString();
 }

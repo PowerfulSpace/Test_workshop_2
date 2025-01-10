@@ -125,7 +125,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "058_DijkstraSolver", "Dijks
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "059_DijkstraSolver_OptimIzed", "DijkstraSolver_OptimIzed\059_DijkstraSolver_OptimIzed.csproj", "{20B63CF2-49C5-4FFA-A83A-BAB6BEDE438F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GetShortestPath", "GetShortestPath\GetShortestPath.csproj", "{D1135DCF-697D-4252-B0A9-0F81FC7CB80B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "060_GetShortestPath", "GetShortestPath\060_GetShortestPath.csproj", "{D1135DCF-697D-4252-B0A9-0F81FC7CB80B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
