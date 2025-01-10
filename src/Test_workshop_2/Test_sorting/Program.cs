@@ -1,112 +1,58 @@
 ﻿
-// Создаём граф
-using System.Collections.Immutable;
 
-Graph graph = new Graph();
-graph.AddEdge("A", "B", 1);
-graph.AddEdge("A", "C", 4);
-graph.AddEdge("B", "C", 2);
-graph.AddEdge("B", "D", 6);
-graph.AddEdge("C", "D", 3);
+int[,] space = new int[5, 5]
+{
+    { 1, 7, 7, 4, 3 },
+    { 9, 3, 4, 4, 4 },
+    { 6, 9, 7, 9, 3 },
+    { 3, 8, 9, 4, 4 },
+    { 6, 2, 3, 5, 1 }
+};
 
-
-// Выводим граф
-graph.PrintGraph();
-
-// Передайте граф в метод вашего алгоритма
-var adjacencyList = graph.GetAdjacencyList();
-int result = FindShortestPath(adjacencyList, "A", "D"); // Ваш алгоритм
-
-Console.WriteLine(result);
+GetShortestPath(space);
 
 Console.ReadLine();
 
 
-
-int FindShortestPath(Dictionary<string, List<(string, int)>> graph, string start, string end)
+int GetShortestPath(int[,] space)
 {
+    PrintArray(space);
 
-    Dictionary<string, int> distances = new Dictionary<string, int>();
-    PriorityQueue<string, int> priorityQueue = new PriorityQueue<string, int>();
-
-    foreach (var item in graph)
+    for (int i = 1; i < space.GetLength(0); i++)
     {
-        distances[item.Key] = int.MaxValue;
+        space[i, 0] = space[i, 0] + space[i - 1, 0];
     }
-
-    distances[start] = 0;
-    priorityQueue.Enqueue(start, 0);
-
-    while (priorityQueue.Count > 0)
+    for (int i = 1; i < space.GetLength(1); i++)
     {
-        string current = priorityQueue.Dequeue();
+        space[0, i] = space[0, i] + space[0, i - 1];
+    }
+    PrintArray(space);
 
-        foreach (var item in graph[current])
+    for (int i = 1; i < space.GetLength(0); i++)
+    {
+        for (int j = 1; j < space.GetLength(1); j++)
         {
-            int distance = distances[current] + item.Item2;
-
-            if (distances[item.Item1] > distance)
-            {
-                distances[item.Item1] = distance;
-                priorityQueue.Enqueue(item.Item1,0);
-            }
-
+            space[i, j] = Math.Min(
+                space[i - 1, j] + space[i, j],
+                space[i, j - 1] + space[i, j]);
         }
     }
 
-    return distances[end];
+    PrintArray(space);
+    Console.WriteLine();
+
+    return space[space.GetLength(0) - 1, space.GetLength(1) - 1];
 }
 
-
-
-class Graph
+void PrintArray(int[,] space)
 {
-    private Dictionary<string, List<(string, int)>> adjacencyList;
-
-    public Graph()
+    for (int i = 0; i < space.GetLength(0); i++)
     {
-        adjacencyList = new Dictionary<string, List<(string, int)>>();
-    }
-
-    public void AddVertex(string vertex)
-    {
-        if (!adjacencyList.ContainsKey(vertex))
+        for (int j = 0; j < space.GetLength(1); j++)
         {
-            adjacencyList[vertex] = new List<(string, int)>();
+            Console.Write(space[i,j] + " ");
         }
+        Console.WriteLine();
     }
-
-    public void AddEdge(string from, string to, int weight)
-    {
-        if (!adjacencyList.ContainsKey(from))
-        {
-            AddVertex(from);
-        }
-        if (!adjacencyList.ContainsKey(to))
-        {
-            AddVertex(to);
-        }
-
-        adjacencyList[from].Add((to, weight));
-        adjacencyList[to].Add((from, weight));
-    }
-
-    public Dictionary<string, List<(string, int)>> GetAdjacencyList()
-    {
-        return adjacencyList;
-    }
-
-    public void PrintGraph()
-    {
-        foreach (var vertex in adjacencyList)
-        {
-            Console.Write($"{vertex.Key}: ");
-            foreach (var edge in vertex.Value)
-            {
-                Console.Write($"({edge.Item1}, {edge.Item2}) ");
-            }
-            Console.WriteLine();
-        }
-    }
+    Console.WriteLine();
 }
-
