@@ -1,5 +1,6 @@
 ﻿
 
+using System.IO;
 using System.Text;
 
 int[,] space = new int[5, 5]
@@ -83,15 +84,24 @@ Stack<(int row, int col)> ReversePath(int[,] space)
     int row = space.GetLength(0) - 1;
     int col = space.GetLength(1) - 1;
 
-    while (row != 0 && col != 0)
+    stack.Push((row, col));
+    while (row > 0 || col > 0)
     {
-        if (space[row - 1, col] >= space[row, col - 1])
+        if (row == 0)
         {
             col--;
         }
-        else
+        else if (col == 0)
         {
             row--;
+        }
+        else if (space[row - 1, col] <= space[row, col - 1])
+        {
+            row--;
+        }
+        else
+        {
+            col--;
         }
         stack.Push((row, col));
     }
