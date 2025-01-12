@@ -1,42 +1,17 @@
 ﻿
 
-//Написать LINQ-запрос для группировки списка сотрудников по их должности.
+var numbers = new[] { 5, 1, 9, 2, 8, 3, 7 };
 
-// Список сотрудников
-var employees = new List<Employee>
-        {
-            new Employee { Id = 1, Name = "Alice", Position = "Manager" },
-            new Employee { Id = 2, Name = "Bob", Position = "Developer" },
-            new Employee { Id = 3, Name = "Charlie", Position = "Developer" },
-            new Employee { Id = 4, Name = "Diana", Position = "Manager" },
-            new Employee { Id = 5, Name = "Eve", Position = "Designer" },
-        };
+var array = numbers.Distinct().OrderBy(x => x).ToArray();
 
+int result = -1;
 
-
-var result = employees.GroupBy(x => x.Position);
-
-
-foreach (var group in result)
+if(array.Length >= 2)
 {
-    Console.WriteLine(group.Key);
-    foreach (var employee in group)
-    {
-        Console.WriteLine(employee.Name);
-    }
-    Console.WriteLine();
+    result = array[array.Length - 2];
 }
-
-
-
 
 Console.ReadLine();
 
 
 
-public class Employee
-{
-    public int Id { get; set; }
-    public string Name { get; set; }
-    public string Position { get; set; }
-}
