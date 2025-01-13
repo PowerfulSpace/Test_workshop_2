@@ -1,14 +1,12 @@
 ﻿
-var items = Enumerable.Range(1, 100); // Коллекция чисел от 1 до 100
-int pageNumber = 3;
-int pageSize = 10;
+var words = new[] { "Apple", "banana", "APPLE", "Banana", "ORANGE", "orange", "grape" };
 
+var result = words.Select(x => x.ToLower()).Distinct();
 
-var result = items.Skip(pageNumber * pageSize).Take(pageSize);
-
-Console.Write($"Страница {pageNumber}: ");
-Console.WriteLine(string.Join(", ", result));
-
+foreach (var word in result)
+{
+    Console.Write(word + " ");
+}
 
 Console.ReadLine();
 
