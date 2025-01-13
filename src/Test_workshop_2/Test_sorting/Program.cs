@@ -1,43 +1,34 @@
 ﻿
-var employees = new[]
+
+
+var words = new[] { "apple", "banana", "pear", "cherry", "fig", "kiwi", "plum" };
+
+
+var result = words.OrderBy(x => x.Length).GroupBy(x => x.Length);
+
+foreach (var word in result)
 {
-    new { Id = 1, Name = "Alice", DepartmentId = 101 },
-    new { Id = 2, Name = "Bob", DepartmentId = 102 },
-    new { Id = 3, Name = "Charlie", DepartmentId = 101 },
-    new { Id = 4, Name = "David", DepartmentId = 103 }
-};
-
-var departments = new[]
-{
-    new { DepartmentId = 101, DepartmentName = "HR" },
-    new { DepartmentId = 102, DepartmentName = "IT" },
-    new { DepartmentId = 103, DepartmentName = "Finance" }
-};
-
-
-var result = employees.Join(
-    departments,
-    e => e.DepartmentId,
-    d => d.DepartmentId,
-    (e,d) => new
+    Console.Write($"Длина {word.Key}:");
+    foreach (var word2 in word)
     {
-        Name = e.Name,
-        department = d.DepartmentName
-    });
+        Console.Write($"{word2}, ");
+    }
+    Console.WriteLine();
+}
 
-var queue = (from e in employees
-             join d in departments
-             on e.DepartmentId equals d.DepartmentId
-             select new
-             {
-                 Name = e.Name,
-                 department = d.DepartmentName
-             }).ToArray(); 
+var result2 = from x in words
+              orderby x.Length
+              group x by x.Length;
 
 
-foreach (var item in result)
+foreach (var word in result2)
 {
-    Console.WriteLine(item);
+    Console.Write($"Длина {word.Key}:");
+    foreach (var word2 in word)
+    {
+        Console.Write($"{word2}, ");
+    }
+    Console.WriteLine();
 }
 
 
