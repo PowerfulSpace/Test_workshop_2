@@ -1,19 +1,14 @@
 ﻿
-var fruits = new[] { "apple", "banana", "apple", "orange", "banana", "grape", "apple" };
+var items = Enumerable.Range(1, 100); // Коллекция чисел от 1 до 100
+int pageNumber = 3;
+int pageSize = 10;
 
-var result = fruits
-    .GroupBy(x => x)
-    .OrderByDescending(x => x.Count())
-    .Select(x => new
-    {
-        Name = x.Key,
-        Count = x.Count()
-    });
 
-foreach (var fruit in result)
-{
-    Console.WriteLine(fruit.Name + ": " + fruit.Count);
-}
+var result = items.Skip(pageNumber * pageSize).Take(pageSize);
+
+Console.Write($"Страница {pageNumber}: ");
+Console.WriteLine(string.Join(", ", result));
+
 
 Console.ReadLine();
 
