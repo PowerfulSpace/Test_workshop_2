@@ -1,36 +1,19 @@
 ﻿
+var fruits = new[] { "apple", "banana", "apple", "orange", "banana", "grape", "apple" };
 
-
-var words = new[] { "apple", "banana", "pear", "cherry", "fig", "kiwi", "plum" };
-
-
-var result = words.OrderBy(x => x.Length).GroupBy(x => x.Length);
-
-foreach (var word in result)
-{
-    Console.Write($"Длина {word.Key}:");
-    foreach (var word2 in word)
+var result = fruits
+    .GroupBy(x => x)
+    .OrderByDescending(x => x.Count())
+    .Select(x => new
     {
-        Console.Write($"{word2}, ");
-    }
-    Console.WriteLine();
-}
+        Name = x.Key,
+        Count = x.Count()
+    });
 
-var result2 = from x in words
-              orderby x.Length
-              group x by x.Length;
-
-
-foreach (var word in result2)
+foreach (var fruit in result)
 {
-    Console.Write($"Длина {word.Key}:");
-    foreach (var word2 in word)
-    {
-        Console.Write($"{word2}, ");
-    }
-    Console.WriteLine();
+    Console.WriteLine(fruit.Name + ": " + fruit.Count);
 }
-
 
 Console.ReadLine();
 
