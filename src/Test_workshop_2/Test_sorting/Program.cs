@@ -16,14 +16,29 @@ var departments = new[]
 
 
 var result = employees.Join(
-    employees,
     departments,
-    employees => employees.DepartmentId,
-    departments => departments.Id);
+    e => e.DepartmentId,
+    d => d.DepartmentId,
+    (e,d) => new
+    {
+        Name = e.Name,
+        department = d.DepartmentName
+    });
 
-var queue = from e in employees
-          join d in departments
-          on e.Id equals d.DepartmentId;
+var queue = (from e in employees
+             join d in departments
+             on e.DepartmentId equals d.DepartmentId
+             select new
+             {
+                 Name = e.Name,
+                 department = d.DepartmentName
+             }).ToArray(); 
+
+
+foreach (var item in result)
+{
+    Console.WriteLine(item);
+}
 
 
 Console.ReadLine();
