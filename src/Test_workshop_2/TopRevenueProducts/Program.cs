@@ -26,6 +26,3 @@ foreach (var item in result)
 
 
 Console.ReadLine();
-
-
-
