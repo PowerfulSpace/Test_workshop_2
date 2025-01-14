@@ -129,9 +129,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "060_GetShortestPath", "GetS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "061_GetShortestPath_Rover", "GetShortestPath_Rover\061_GetShortestPath_Rover.csproj", "{60DC500E-CCE5-41F6-BCDF-58520AD1E33C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopRevenueProducts", "TopRevenueProducts\TopRevenueProducts.csproj", "{EA8EF494-CDC9-4D40-86B6-2DA254269180}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "062_TopRevenueProducts", "TopRevenueProducts\062_TopRevenueProducts.csproj", "{EA8EF494-CDC9-4D40-86B6-2DA254269180}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopBottomSalary", "TopBottomSalary\TopBottomSalary.csproj", "{10FAE484-63C6-4469-852D-647E85240DDF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "063_TopBottomSalary", "TopBottomSalary\063_TopBottomSalary.csproj", "{10FAE484-63C6-4469-852D-647E85240DDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
