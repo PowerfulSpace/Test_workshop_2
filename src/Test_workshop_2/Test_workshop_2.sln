@@ -131,6 +131,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "061_GetShortestPath_Rover",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopRevenueProducts", "TopRevenueProducts\TopRevenueProducts.csproj", "{EA8EF494-CDC9-4D40-86B6-2DA254269180}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TopBottomSalary", "TopBottomSalary\TopBottomSalary.csproj", "{10FAE484-63C6-4469-852D-647E85240DDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -393,6 +395,10 @@ Global
 		{EA8EF494-CDC9-4D40-86B6-2DA254269180}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA8EF494-CDC9-4D40-86B6-2DA254269180}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA8EF494-CDC9-4D40-86B6-2DA254269180}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10FAE484-63C6-4469-852D-647E85240DDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10FAE484-63C6-4469-852D-647E85240DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10FAE484-63C6-4469-852D-647E85240DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10FAE484-63C6-4469-852D-647E85240DDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
