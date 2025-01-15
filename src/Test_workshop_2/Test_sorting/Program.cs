@@ -1,24 +1,19 @@
 ﻿
+var words = new[] { "apple", "banana", "cherry", "date", "fig", "grape" };
 
-var numbers = new[] { 1, 2, 2, 3, 3, 3, 4, 5, 5, 5, 5 };
-
-
-var result = numbers
-    .GroupBy(x => x)
+var result = words
+    .GroupBy(x => x.Length)
     .Select(x => new
     {
-        Num = x.Key,
+        Length = x.Key,
         Count = x.Count()
     })
-    .OrderByDescending(x => x.Count)
-    .FirstOrDefault();
+    .OrderByDescending(x => x.Count);
 
-if (result != null)
+foreach (var word in result)
 {
-    Console.WriteLine($"Элемент: {result.Num}, Количество вхождений: {result.Count}");
+    Console.WriteLine($"Длина: {word.Length}, Количество слов: {word.Count}");
 }
-
-
 
 Console.ReadLine();
 
