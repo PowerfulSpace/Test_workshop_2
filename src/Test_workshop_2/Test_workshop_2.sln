@@ -137,6 +137,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "064_OrderClientAnalyzer", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeIntersect", "EmployeeIntersect\EmployeeIntersect.csproj", "{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TransactionAnalyzer", "TransactionAnalyzer\TransactionAnalyzer.csproj", "{13C313D2-D3B0-468B-B5D2-3812305F43CA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -411,6 +413,10 @@ Global
 		{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13C313D2-D3B0-468B-B5D2-3812305F43CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13C313D2-D3B0-468B-B5D2-3812305F43CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13C313D2-D3B0-468B-B5D2-3812305F43CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13C313D2-D3B0-468B-B5D2-3812305F43CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
