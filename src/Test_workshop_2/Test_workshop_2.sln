@@ -133,7 +133,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "062_TopRevenueProducts", "T
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "063_TopBottomSalary", "TopBottomSalary\063_TopBottomSalary.csproj", "{10FAE484-63C6-4469-852D-647E85240DDF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderClientAnalyzer", "OrderClientAnalyzer\OrderClientAnalyzer.csproj", "{8934D5D5-AA59-406B-A5E6-9059B92E6B24}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "064_OrderClientAnalyzer", "OrderClientAnalyzer\064_OrderClientAnalyzer.csproj", "{8934D5D5-AA59-406B-A5E6-9059B92E6B24}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeIntersect", "EmployeeIntersect\EmployeeIntersect.csproj", "{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -405,6 +407,10 @@ Global
 		{8934D5D5-AA59-406B-A5E6-9059B92E6B24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8934D5D5-AA59-406B-A5E6-9059B92E6B24}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8934D5D5-AA59-406B-A5E6-9059B92E6B24}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BE5449A-9CF7-47DA-BA1A-50BFE3DEB295}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
