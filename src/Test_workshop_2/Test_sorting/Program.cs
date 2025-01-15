@@ -15,15 +15,20 @@ var employeesSet2 = new[]
 
 var result = employeesSet1.Intersect(employeesSet2);
 
-var result2 = employeesSet1.Intersect(employeesSet2);
+var result2 = employeesSet1.Except(employeesSet2).Union(employeesSet2.Except(employeesSet1));
 
 
-
+Console.Write("Пересечение:");
 foreach (var employee in result)
 {
-    Console.WriteLine(employee);
+    Console.Write($"[Id: {employee.Id}, Name: {employee.Name}], ");
 }
-
+Console.WriteLine();
+Console.Write("Разность:");
+foreach (var employee in result2)
+{
+    Console.Write($"[Id: {employee.Id}, Name: {employee.Name}], ");
+}
 
 
 Console.ReadLine();
