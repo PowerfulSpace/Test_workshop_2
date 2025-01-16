@@ -16,5 +16,3 @@ foreach (var word in result)
 }
 
 Console.ReadLine();
-
-
