@@ -143,6 +143,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrequencyFinder", "Frequenc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingWordsWithDifferentLengths", "FindingWordsWithDifferentLengths\FindingWordsWithDifferentLengths.csproj", "{2EA59D1F-CF30-4E91-93F3-333C24E3A12F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingStudentsByCourses", "FindingStudentsByCourses\FindingStudentsByCourses.csproj", "{1F6C546B-BF38-4CA5-BC92-2DE06C4BF1F4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -429,6 +431,10 @@ Global
 		{2EA59D1F-CF30-4E91-93F3-333C24E3A12F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EA59D1F-CF30-4E91-93F3-333C24E3A12F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EA59D1F-CF30-4E91-93F3-333C24E3A12F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F6C546B-BF38-4CA5-BC92-2DE06C4BF1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F6C546B-BF38-4CA5-BC92-2DE06C4BF1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F6C546B-BF38-4CA5-BC92-2DE06C4BF1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F6C546B-BF38-4CA5-BC92-2DE06C4BF1F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -26,11 +26,11 @@ var enrollments = new[]
 var result = enrollments
     .Where(x => x.Course == "Math")
     .Join(students, e => e.StudentId, s => s.StudentId, (e, s) => new
-     {
-         Name = s.Name,
-         Course = e.Course
-     });
-    
+    {
+        Name = s.Name,
+        Course = e.Course
+    });
+
 
 foreach (var item in result)
 {
