@@ -147,6 +147,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "067_FindingStudentsByCourse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "068_FindingTheMovingAverage", "FindingTheMovingAverage\068_FindingTheMovingAverage.csproj", "{1352E105-2D07-4A72-B9FE-68861F2F748B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectionOfPairs", "SelectionOfPairs\SelectionOfPairs.csproj", "{DB0E03DE-01AF-4E2C-8912-706E4563ADAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -441,6 +443,10 @@ Global
 		{1352E105-2D07-4A72-B9FE-68861F2F748B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1352E105-2D07-4A72-B9FE-68861F2F748B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1352E105-2D07-4A72-B9FE-68861F2F748B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB0E03DE-01AF-4E2C-8912-706E4563ADAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB0E03DE-01AF-4E2C-8912-706E4563ADAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB0E03DE-01AF-4E2C-8912-706E4563ADAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB0E03DE-01AF-4E2C-8912-706E4563ADAF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
