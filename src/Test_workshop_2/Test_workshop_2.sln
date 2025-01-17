@@ -147,11 +147,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "067_FindingStudentsByCourse
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "068_FindingTheMovingAverage", "FindingTheMovingAverage\068_FindingTheMovingAverage.csproj", "{1352E105-2D07-4A72-B9FE-68861F2F748B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SelectionOfPairs", "SelectionOfPairs\SelectionOfPairs.csproj", "{DB0E03DE-01AF-4E2C-8912-706E4563ADAF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "072_SelectionOfPairs", "SelectionOfPairs\072_SelectionOfPairs.csproj", "{DB0E03DE-01AF-4E2C-8912-706E4563ADAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingTheSumOfDigitAStringRepresentationOfNumbers", "FindingTheSumOfDigitAStringRepresentationOfNumbers\FindingTheSumOfDigitAStringRepresentationOfNumbers.csproj", "{8ABA7DDC-501A-4554-9F5C-F7BC8DD1B65C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "071_FindingTheSumOfDigitAStringRepresentationOfNumbers", "FindingTheSumOfDigitAStringRepresentationOfNumbers\071_FindingTheSumOfDigitAStringRepresentationOfNumbers.csproj", "{8ABA7DDC-501A-4554-9F5C-F7BC8DD1B65C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentsWithTheHighestAverageGrade", "StudentsWithTheHighestAverageGrade\StudentsWithTheHighestAverageGrade.csproj", "{84BB19F4-BAFD-45FA-A918-6E2EBDFF0AF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "073_StudentsWithTheHighestAverageGrade", "StudentsWithTheHighestAverageGrade\073_StudentsWithTheHighestAverageGrade.csproj", "{84BB19F4-BAFD-45FA-A918-6E2EBDFF0AF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringStudentsWithMoreThanThreeFailingGrades", "FilteringStudentsWithMoreThanThreeFailingGrades\FilteringStudentsWithMoreThanThreeFailingGrades.csproj", "{22B1EC2D-2E02-4394-9DBB-7D3510935380}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -459,6 +461,10 @@ Global
 		{84BB19F4-BAFD-45FA-A918-6E2EBDFF0AF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84BB19F4-BAFD-45FA-A918-6E2EBDFF0AF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84BB19F4-BAFD-45FA-A918-6E2EBDFF0AF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{22B1EC2D-2E02-4394-9DBB-7D3510935380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{22B1EC2D-2E02-4394-9DBB-7D3510935380}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{22B1EC2D-2E02-4394-9DBB-7D3510935380}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{22B1EC2D-2E02-4394-9DBB-7D3510935380}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
