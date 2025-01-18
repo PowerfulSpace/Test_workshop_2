@@ -153,9 +153,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "071_FindingTheSumOfDigitASt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "073_StudentsWithTheHighestAverageGrade", "StudentsWithTheHighestAverageGrade\073_StudentsWithTheHighestAverageGrade.csproj", "{84BB19F4-BAFD-45FA-A918-6E2EBDFF0AF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringStudentsWithMoreThanThreeFailingGrades", "FilteringStudentsWithMoreThanThreeFailingGrades\FilteringStudentsWithMoreThanThreeFailingGrades.csproj", "{22B1EC2D-2E02-4394-9DBB-7D3510935380}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "074_FilteringStudentsWithMoreThanThreeFailingGrades", "FilteringStudentsWithMoreThanThreeFailingGrades\074_FilteringStudentsWithMoreThanThreeFailingGrades.csproj", "{22B1EC2D-2E02-4394-9DBB-7D3510935380}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingStudentsByAverageScore", "GroupingStudentsByAverageScore\GroupingStudentsByAverageScore.csproj", "{172E8BF6-821E-4630-86CA-550C9CC61FEB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "075_GroupingStudentsByAverageScore", "GroupingStudentsByAverageScore\075_GroupingStudentsByAverageScore.csproj", "{172E8BF6-821E-4630-86CA-550C9CC61FEB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepartamentAverageSalary", "DepartamentAverageSalary\DepartamentAverageSalary.csproj", "{DBBC4A5E-F555-4FCC-AB4A-4F376F1308A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -471,6 +473,10 @@ Global
 		{172E8BF6-821E-4630-86CA-550C9CC61FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{172E8BF6-821E-4630-86CA-550C9CC61FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{172E8BF6-821E-4630-86CA-550C9CC61FEB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DBBC4A5E-F555-4FCC-AB4A-4F376F1308A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DBBC4A5E-F555-4FCC-AB4A-4F376F1308A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DBBC4A5E-F555-4FCC-AB4A-4F376F1308A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DBBC4A5E-F555-4FCC-AB4A-4F376F1308A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
