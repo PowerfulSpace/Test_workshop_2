@@ -163,6 +163,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingEmployeesWithSalarie
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingEmployeesBySalaryRnges", "GroupingEmployeesBySalaryRnges\GroupingEmployeesBySalaryRnges.csproj", "{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchMinMaxPosition", "SearchMinMaxPosition\SearchMinMaxPosition.csproj", "{FE02C525-7185-4D2A-A012-98AE9BBA0629}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -489,6 +491,10 @@ Global
 		{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE02C525-7185-4D2A-A012-98AE9BBA0629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE02C525-7185-4D2A-A012-98AE9BBA0629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE02C525-7185-4D2A-A012-98AE9BBA0629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE02C525-7185-4D2A-A012-98AE9BBA0629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
