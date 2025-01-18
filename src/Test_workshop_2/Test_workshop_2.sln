@@ -155,6 +155,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "073_StudentsWithTheHighestA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FilteringStudentsWithMoreThanThreeFailingGrades", "FilteringStudentsWithMoreThanThreeFailingGrades\FilteringStudentsWithMoreThanThreeFailingGrades.csproj", "{22B1EC2D-2E02-4394-9DBB-7D3510935380}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingStudentsByAverageScore", "GroupingStudentsByAverageScore\GroupingStudentsByAverageScore.csproj", "{172E8BF6-821E-4630-86CA-550C9CC61FEB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -465,6 +467,10 @@ Global
 		{22B1EC2D-2E02-4394-9DBB-7D3510935380}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22B1EC2D-2E02-4394-9DBB-7D3510935380}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22B1EC2D-2E02-4394-9DBB-7D3510935380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{172E8BF6-821E-4630-86CA-550C9CC61FEB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{172E8BF6-821E-4630-86CA-550C9CC61FEB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{172E8BF6-821E-4630-86CA-550C9CC61FEB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{172E8BF6-821E-4630-86CA-550C9CC61FEB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
