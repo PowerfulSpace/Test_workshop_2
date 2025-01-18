@@ -161,6 +161,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepartamentAverageSalary", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingEmployeesWithSalariesAboveTheDepartmentAverage", "FindingEmployeesWithSalariesAboveTheDepartmentAverage\FindingEmployeesWithSalariesAboveTheDepartmentAverage.csproj", "{0DBF8FB8-89ED-48A5-9B73-015A37B59BFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingEmployeesBySalaryRnges", "GroupingEmployeesBySalaryRnges\GroupingEmployeesBySalaryRnges.csproj", "{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -483,6 +485,10 @@ Global
 		{0DBF8FB8-89ED-48A5-9B73-015A37B59BFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DBF8FB8-89ED-48A5-9B73-015A37B59BFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DBF8FB8-89ED-48A5-9B73-015A37B59BFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
