@@ -50,7 +50,7 @@ if (total / 2 == expenses[expenses.Count - 1])
     Console.WriteLine("The expenses total {0:C2}.", expenses[expenses.Count - 1]);
 else
     Console.WriteLine("The expenses total {0:C2}.", total);
-   }
+   
 
 Console.ReadLine();
 
