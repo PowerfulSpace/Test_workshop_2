@@ -13,7 +13,6 @@ if (matches.Count > 0)
 }
 else
 {
-    Console.WriteLine("Не найдено");
 }
 Console.ReadLine();
 
