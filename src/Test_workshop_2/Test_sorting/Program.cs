@@ -11,9 +11,7 @@ if (matches.Count > 0)
     foreach (Match match in matches)
         Console.WriteLine(match.Value);
 }
-else
-{
-}
+
 Console.ReadLine();
 
 
