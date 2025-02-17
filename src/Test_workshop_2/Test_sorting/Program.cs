@@ -13,7 +13,7 @@ if (matches.Count > 0)
 }
 else
 {
-    Console.WriteLine("Совпадений не найдено");
+    Console.WriteLine("Не найдено");
 }
 Console.ReadLine();
 
