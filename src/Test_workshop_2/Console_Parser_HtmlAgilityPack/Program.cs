@@ -2,6 +2,8 @@
 
 
 // URL сайта, который будем парсить
+using HtmlAgilityPack;
+
 string url = "https://example.com";
 
 // Загружаем HTML-документ
