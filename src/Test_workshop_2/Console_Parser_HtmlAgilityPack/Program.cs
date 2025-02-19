@@ -18,7 +18,7 @@ foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
     }
 }
 
-// Выводим найденные ссылки
+
 Console.WriteLine("Найденные ссылки:");
 foreach (string link in links)
 {
