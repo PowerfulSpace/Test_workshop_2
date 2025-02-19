@@ -3,7 +3,7 @@ using HtmlAgilityPack;
 
 string url = "https://example.com";
 
-// Загружаем HTML-документ
+
 HtmlWeb web = new HtmlWeb();
 HtmlDocument doc = web.Load(url);
 
