@@ -7,7 +7,7 @@ string url = "https://example.com";
 HtmlWeb web = new HtmlWeb();
 HtmlDocument doc = web.Load(url);
 
-// Извлекаем все ссылки (теги <a>)
+
 List<string> links = new List<string>();
 foreach (HtmlNode link in doc.DocumentNode.SelectNodes("//a[@href]"))
 {
