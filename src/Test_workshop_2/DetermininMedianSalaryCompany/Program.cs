@@ -1,11 +1,6 @@
 ﻿var employees = new[]
 {
     new { Name = "Иван", Salary = 45000 },
-    new { Name = "Мария", Salary = 75000 },
-    new { Name = "Петр", Salary = 120000 },
-    new { Name = "Анна", Salary = 95000 },
-    new { Name = "Анна2", Salary = 98000 },
-    new { Name = "Ольга", Salary = 50000 }
 };
 
 var sortedSalaries = employees
