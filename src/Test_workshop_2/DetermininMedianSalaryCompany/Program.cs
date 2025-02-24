@@ -4,11 +4,9 @@
 
 var dataService = new DataService();
 
-// Первый вызов: данные загружаются из БД
 var data1 = await dataService.GetDataAsync(1);
 Console.WriteLine(data1);
 
-// Второй вызов: данные берутся из кэша
 var data2 = await dataService.GetDataAsync(1);
 Console.WriteLine(data2);
 
