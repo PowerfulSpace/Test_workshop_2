@@ -19,10 +19,9 @@ Console.ReadLine();
 
 public class DataService
 {
-    // Кэш для хранения данных
+
     private readonly Dictionary<int, string> _cache = new Dictionary<int, string>();
 
-    // Метод для получения данных
     public async ValueTask<string> GetDataAsync(int id)
     {
         // Проверяем, есть ли данные в кэше
