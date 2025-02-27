@@ -25,7 +25,7 @@ public class DataService
 
     public async ValueTask<string> GetDataAsync(int id)
     {
-        // Проверяем, есть ли данные в кэше
+
         if (_cache.TryGetValue(id, out var data))
         {
             Console.WriteLine("Данные найдены в кэше.");
