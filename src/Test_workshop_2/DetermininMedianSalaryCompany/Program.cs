@@ -32,7 +32,7 @@ public class DataService
             return data; // Синхронный возврат
         }
 
-        // Если данных нет в кэше, загружаем их из базы данных
+
         Console.WriteLine("Данные не найдены в кэше. Загрузка из БД...");
         data = await FetchDataFromDbAsync(id);
 
