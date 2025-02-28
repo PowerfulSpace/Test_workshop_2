@@ -19,20 +19,19 @@ Console.ReadLine();
 
 public class DataService
 {
-
     private readonly Dictionary<int, string> _cache = new Dictionary<int, string>();
 
-
+    // Метод для получения данных
     public async ValueTask<string> GetDataAsync(int id)
     {
-
+        // Проверяем, есть ли данные в кэше
         if (_cache.TryGetValue(id, out var data))
         {
             Console.WriteLine("Данные найдены в кэше.");
             return data; // Синхронный возврат
         }
 
-
+        // Если данных нет в кэше, загружаем их из базы данных
         Console.WriteLine("Данные не найдены в кэше. Загрузка из БД...");
         data = await FetchDataFromDbAsync(id);
 
