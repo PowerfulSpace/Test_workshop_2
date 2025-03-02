@@ -169,6 +169,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetermininMedianSalaryCompa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_Parser_HtmlAgilityPack", "Console_Parser_HtmlAgilityPack\Console_Parser_HtmlAgilityPack.csproj", "{06EC4EDC-18BB-4353-AD8F-2AB159EB9961}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessor", "PaymentProcessor\PaymentProcessor.csproj", "{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -507,6 +509,10 @@ Global
 		{06EC4EDC-18BB-4353-AD8F-2AB159EB9961}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06EC4EDC-18BB-4353-AD8F-2AB159EB9961}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06EC4EDC-18BB-4353-AD8F-2AB159EB9961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
