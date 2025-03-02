@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PaymentProcessor.Interfaces;
 
 namespace PaymentProcessor.PaymentProcessors
 {
-    internal class CreditCardPaymentProcessor
+    public class CreditCardPaymentProcessor : IPaymentProcessor
     {
+        public void ProcessPayment(decimal amount)
+        {
+            Console.WriteLine($"Processing credit card payment of {amount:C}");
+        }
     }
 }

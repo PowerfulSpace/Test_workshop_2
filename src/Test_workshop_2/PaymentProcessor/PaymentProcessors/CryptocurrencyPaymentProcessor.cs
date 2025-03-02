@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PaymentProcessor.Interfaces;
 
 namespace PaymentProcessor.PaymentProcessors
 {
-    internal class CryptocurrencyPaymentProcessor
+    public class CryptocurrencyPaymentProcessor : IPaymentProcessor
     {
+        public void ProcessPayment(decimal amount)
+        {
+            Console.WriteLine($"Processing cryptocurrency payment of {amount:C}");
+        }
     }
+
 }

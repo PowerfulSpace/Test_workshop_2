@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PaymentProcessor.Interfaces;
 
 namespace PaymentProcessor.PaymentProcessors
 {
-    internal class PayPalPaymentProcessor
+    public class PayPalPaymentProcessor : IPaymentProcessor
     {
+        public void ProcessPayment(decimal amount)
+        {
+            Console.WriteLine($"Processing PayPal payment of {amount:C}");
+        }
     }
 }
