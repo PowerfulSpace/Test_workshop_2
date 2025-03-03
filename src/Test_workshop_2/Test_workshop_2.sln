@@ -157,19 +157,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "074_FilteringStudentsWithMo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "075_GroupingStudentsByAverageScore", "GroupingStudentsByAverageScore\075_GroupingStudentsByAverageScore.csproj", "{172E8BF6-821E-4630-86CA-550C9CC61FEB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepartamentAverageSalary", "DepartamentAverageSalary\DepartamentAverageSalary.csproj", "{DBBC4A5E-F555-4FCC-AB4A-4F376F1308A3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "077_DepartamentAverageSalary", "DepartamentAverageSalary\077_DepartamentAverageSalary.csproj", "{DBBC4A5E-F555-4FCC-AB4A-4F376F1308A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindingEmployeesWithSalariesAboveTheDepartmentAverage", "FindingEmployeesWithSalariesAboveTheDepartmentAverage\FindingEmployeesWithSalariesAboveTheDepartmentAverage.csproj", "{0DBF8FB8-89ED-48A5-9B73-015A37B59BFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "079_FindingEmployeesWithSalariesAboveTheDepartmentAverage", "FindingEmployeesWithSalariesAboveTheDepartmentAverage\079_FindingEmployeesWithSalariesAboveTheDepartmentAverage.csproj", "{0DBF8FB8-89ED-48A5-9B73-015A37B59BFD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GroupingEmployeesBySalaryRnges", "GroupingEmployeesBySalaryRnges\GroupingEmployeesBySalaryRnges.csproj", "{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "080_GroupingEmployeesBySalaryRnges", "GroupingEmployeesBySalaryRnges\080_GroupingEmployeesBySalaryRnges.csproj", "{343B1AE5-348F-4E7E-91DB-2DCAA58E144D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchMinMaxPosition", "SearchMinMaxPosition\SearchMinMaxPosition.csproj", "{FE02C525-7185-4D2A-A012-98AE9BBA0629}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "082_SearchMinMaxPosition", "SearchMinMaxPosition\082_SearchMinMaxPosition.csproj", "{FE02C525-7185-4D2A-A012-98AE9BBA0629}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DetermininMedianSalaryCompany", "DetermininMedianSalaryCompany\DetermininMedianSalaryCompany.csproj", "{0080D22E-CD25-4DAB-88B6-E38FB79D1E96}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "078_DetermininMedianSalaryCompany", "DetermininMedianSalaryCompany\078_DetermininMedianSalaryCompany.csproj", "{0080D22E-CD25-4DAB-88B6-E38FB79D1E96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_Parser_HtmlAgilityPack", "Console_Parser_HtmlAgilityPack\Console_Parser_HtmlAgilityPack.csproj", "{06EC4EDC-18BB-4353-AD8F-2AB159EB9961}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "076_Console_Parser_HtmlAgilityPack", "Console_Parser_HtmlAgilityPack\076_Console_Parser_HtmlAgilityPack.csproj", "{06EC4EDC-18BB-4353-AD8F-2AB159EB9961}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentProcessor", "PaymentProcessor\PaymentProcessor.csproj", "{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "081_PaymentProcessor", "PaymentProcessor\081_PaymentProcessor.csproj", "{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
