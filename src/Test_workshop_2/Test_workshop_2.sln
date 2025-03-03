@@ -171,6 +171,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "076_Console_Parser_HtmlAgil
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "081_PaymentProcessor", "PaymentProcessor\081_PaymentProcessor.csproj", "{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Switch_Off_on", "Switch_Off_on\Switch_Off_on.csproj", "{6B4FAF10-F207-4605-9368-6A6053225388}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -513,6 +515,10 @@ Global
 		{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1D2DF4E-E160-42FB-A744-B8E30C9CF9F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B4FAF10-F207-4605-9368-6A6053225388}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B4FAF10-F207-4605-9368-6A6053225388}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B4FAF10-F207-4605-9368-6A6053225388}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B4FAF10-F207-4605-9368-6A6053225388}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
