@@ -15,7 +15,9 @@ RemoteControl remote = new RemoteControl();
 remote.SetCommand(lightOn);
 remote.PressButton();
 
-
+// Выключение света
+remote.SetCommand(lightOff);
+remote.PressButton();
 
 // Отмена последней команды (включение света)
 remote.PressUndo();
