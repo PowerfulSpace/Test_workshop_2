@@ -9,10 +9,6 @@ var data = new string[]
 {
     "tom@gmail.com",
     "+12345678999",
-    "bob@yahoo.com",
-    "+13435465566",
-    "sam@yandex.ru",
-    "+43743989393"
 };
 
 Console.WriteLine("Email List");
